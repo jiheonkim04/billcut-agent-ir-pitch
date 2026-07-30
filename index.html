@@ -1500,6 +1500,630 @@
       font-weight: 850;
     }
 
+    /* Page 3 · Investor outcome comparison */
+    .p3-ir-intro {
+      flex: 0 0 100px;
+      margin-top: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 430px;
+      align-items: end;
+      gap: 42px;
+    }
+
+    .p3-ir-intro .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .p3-ir-title {
+      margin: 0;
+      color: #f7faf8;
+      font-size: 43px;
+      line-height: 1.03;
+      letter-spacing: -.052em;
+      font-weight: 900;
+    }
+
+    .p3-ir-title span {
+      color: var(--green-2);
+    }
+
+    .p3-ir-thesis {
+      margin: 0 0 5px;
+      padding-left: 22px;
+      border-left: 2px solid rgba(98,243,166,.52);
+      color: #9eaea4;
+      font-size: 18px;
+      line-height: 1.45;
+      letter-spacing: -.025em;
+      font-weight: 680;
+    }
+
+    .p3-ir-thesis strong {
+      display: block;
+      margin-top: 3px;
+      color: #f2f7f4;
+      font-size: 22px;
+      font-weight: 860;
+    }
+
+    .p3-ir-compare {
+      flex: 0 0 410px;
+      height: 410px;
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: .82fr 68px 1.28fr;
+      align-items: stretch;
+    }
+
+    .p3-ir-panel {
+      position: relative;
+      min-width: 0;
+      height: 100%;
+      padding: 21px 22px;
+      overflow: hidden;
+      border-radius: 28px;
+    }
+
+    .p3-ir-panel-head {
+      min-height: 46px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .p3-ir-panel-head .label {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .p3-ir-panel-head h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      font-weight: 880;
+    }
+
+    .p3-ir-badge {
+      flex: 0 0 auto;
+      padding: 7px 9px;
+      border-radius: 999px;
+      font-size: 9px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .055em;
+      white-space: nowrap;
+    }
+
+    .p3-ir-meter {
+      border: 1px solid rgba(255,119,109,.23);
+      color: #e6e7e6;
+      background:
+        radial-gradient(circle at 14% 0%, rgba(255,92,82,.12), transparent 35%),
+        linear-gradient(145deg, rgba(37,18,18,.96), rgba(10,13,12,.98));
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.018);
+    }
+
+    .p3-ir-meter .label {
+      color: #a88682;
+    }
+
+    .p3-ir-meter h3 {
+      color: #f0eae8;
+    }
+
+    .p3-ir-meter .p3-ir-badge {
+      color: #ff8a80;
+      border: 1px solid rgba(255,119,109,.22);
+      background: rgba(255,92,82,.08);
+    }
+
+    .p3-ir-meter-visual {
+      height: 142px;
+      margin-top: 13px;
+      padding: 18px 17px 14px;
+      display: grid;
+      grid-template-columns: 176px 1fr;
+      align-items: end;
+      gap: 17px;
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 18px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .p3-ir-reading small {
+      display: block;
+      color: #8f9993;
+      font-size: 11px;
+      font-weight: 760;
+      letter-spacing: .04em;
+    }
+
+    .p3-ir-reading strong {
+      display: block;
+      margin-top: 7px;
+      color: #f4f4f3;
+      font-size: 52px;
+      line-height: .94;
+      letter-spacing: -.055em;
+      font-weight: 900;
+    }
+
+    .p3-ir-reading strong em {
+      margin-left: 5px;
+      color: #9da7a1;
+      font-size: 19px;
+      font-style: normal;
+      letter-spacing: -.02em;
+    }
+
+    .p3-ir-reading span {
+      display: block;
+      margin-top: 10px;
+      color: #ff8a80;
+      font-size: 11px;
+      font-weight: 820;
+    }
+
+    .p3-ir-bars {
+      height: 88px;
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .p3-ir-bar {
+      flex: 1;
+      height: var(--h);
+      min-width: 4px;
+      border-radius: 4px 4px 1px 1px;
+      background: linear-gradient(180deg, #ff847b, #6a3430);
+      transform-origin: bottom;
+      opacity: .72;
+    }
+
+    .slide.active .p3-ir-bar {
+      animation: p3-ir-meter-pulse 1.35s ease-in-out infinite alternate;
+      animation-delay: calc(var(--i) * -70ms);
+    }
+
+    @keyframes p3-ir-meter-pulse {
+      from { transform: scaleY(.64); opacity: .36; }
+      to { transform: scaleY(1); opacity: .88; }
+    }
+
+    .p3-ir-dead-end {
+      min-height: 58px;
+      margin-top: 13px;
+      display: grid;
+      grid-template-columns: 1fr 28px 1fr 28px 52px;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .p3-ir-dead-end span {
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 11px;
+      color: #bac2bd;
+      background: rgba(255,255,255,.035);
+      font-size: 13px;
+      font-weight: 820;
+    }
+
+    .p3-ir-dead-end i {
+      color: #6e7872;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .p3-ir-dead-end .stop {
+      color: #ff8278;
+      border-color: rgba(255,119,109,.27);
+      background: rgba(255,92,82,.1);
+      font-size: 20px;
+      animation: p3-ir-stop-pulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes p3-ir-stop-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,92,82,0); }
+      50% { box-shadow: 0 0 0 7px rgba(255,92,82,.055); }
+    }
+
+    .p3-ir-meter-caption {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #7f8a84;
+      font-size: 11px;
+      font-weight: 720;
+    }
+
+    .p3-ir-meter-caption strong {
+      color: #ff8a80;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .p3-ir-question {
+      min-height: 61px;
+      margin: 13px 0 0;
+      padding: 15px 17px 15px 51px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(255,119,109,.2);
+      border-radius: 16px 16px 16px 5px;
+      color: #fff5f2;
+      background: rgba(255,92,82,.075);
+      font-size: 19px;
+      line-height: 1.18;
+      letter-spacing: -.03em;
+      font-weight: 880;
+    }
+
+    .p3-ir-question::before {
+      content: "?";
+      position: absolute;
+      left: 16px;
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #2c0c0a;
+      background: #ff8278;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .p3-ir-vs {
+      position: relative;
+      display: grid;
+      place-items: center;
+      color: #75837a;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .1em;
+    }
+
+    .p3-ir-vs::before,
+    .p3-ir-vs::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 1px;
+      height: 140px;
+      background: linear-gradient(transparent, rgba(255,255,255,.13), transparent);
+    }
+
+    .p3-ir-vs::before { top: 0; }
+    .p3-ir-vs::after { bottom: 0; }
+
+    .p3-ir-vs span {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      color: #dce5df;
+      background: #09120d;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .p3-ir-agent {
+      border: 1px solid rgba(98,243,166,.28);
+      color: #eef8f2;
+      background:
+        radial-gradient(circle at 90% 0%, rgba(16,200,119,.19), transparent 38%),
+        linear-gradient(145deg, rgba(7,40,23,.98), rgba(4,18,11,.98));
+      box-shadow: 0 27px 68px rgba(0,0,0,.34), inset 0 0 0 1px rgba(98,243,166,.025);
+    }
+
+    .p3-ir-agent .label {
+      color: #7fe4ae;
+    }
+
+    .p3-ir-agent h3 {
+      color: #f5fff9;
+    }
+
+    .p3-ir-agent .p3-ir-badge {
+      color: #062115;
+      border: 1px solid rgba(98,243,166,.5);
+      background: var(--green-2);
+      box-shadow: 0 7px 22px rgba(16,200,119,.18);
+    }
+
+    .p3-ir-metrics {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr .86fr 1fr;
+      gap: 8px;
+    }
+
+    .p3-ir-metric {
+      min-width: 0;
+      padding: 9px 11px;
+      border: 1px solid rgba(255,255,255,.075);
+      border-radius: 12px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .p3-ir-metric span {
+      display: block;
+      color: #789083;
+      font-size: 9px;
+      line-height: 1.1;
+      font-weight: 780;
+      letter-spacing: .035em;
+    }
+
+    .p3-ir-metric strong {
+      display: block;
+      margin-top: 5px;
+      color: #eaf3ed;
+      font-size: 23px;
+      line-height: 1;
+      letter-spacing: -.045em;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .p3-ir-metric strong em {
+      margin-left: 2px;
+      font-size: 11px;
+      font-style: normal;
+      letter-spacing: -.02em;
+    }
+
+    .p3-ir-metric.waste strong { color: #ff8278; }
+    .p3-ir-metric.goal strong { color: #dbe6df; }
+    .p3-ir-metric.agent strong { color: var(--green-2); }
+
+    .p3-ir-chart {
+      position: relative;
+      height: 183px;
+      margin-top: 9px;
+      overflow: hidden;
+      border: 1px solid rgba(98,243,166,.12);
+      border-radius: 15px;
+      background:
+        linear-gradient(rgba(98,243,166,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(98,243,166,.035) 1px, transparent 1px),
+        rgba(0,9,5,.44);
+      background-size: 100% 45px, 88px 100%, auto;
+    }
+
+    .p3-ir-chart svg {
+      position: absolute;
+      inset: 9px 12px 7px;
+      width: calc(100% - 24px);
+      height: calc(100% - 16px);
+      overflow: visible;
+    }
+
+    .p3-ir-goal-line {
+      stroke: rgba(235,244,238,.5);
+      stroke-width: 1.4;
+      stroke-dasharray: 7 7;
+    }
+
+    .p3-ir-waste-path {
+      fill: none;
+      stroke: #ff6f65;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 860;
+      stroke-dashoffset: 860;
+      filter: drop-shadow(0 0 7px rgba(255,92,82,.25));
+    }
+
+    .p3-ir-agent-path {
+      fill: none;
+      stroke: var(--green-2);
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-dasharray: 860;
+      stroke-dashoffset: 860;
+      filter: drop-shadow(0 0 9px rgba(16,200,119,.34));
+    }
+
+    .slide.active .p3-ir-waste-path {
+      animation: p3-ir-draw-path 1.15s .18s cubic-bezier(.2,.75,.3,1) forwards;
+    }
+
+    .slide.active .p3-ir-agent-path {
+      animation: p3-ir-draw-path 1.35s .48s cubic-bezier(.2,.75,.3,1) forwards;
+    }
+
+    @keyframes p3-ir-draw-path {
+      to { stroke-dashoffset: 0; }
+    }
+
+    .p3-ir-waste-dot {
+      fill: #ff6f65;
+      opacity: 0;
+    }
+
+    .p3-ir-agent-dot {
+      fill: var(--green-2);
+      opacity: 0;
+    }
+
+    .slide.active .p3-ir-waste-dot {
+      animation: p3-ir-dot-in .38s 1.15s ease-out forwards;
+    }
+
+    .slide.active .p3-ir-agent-dot {
+      animation: p3-ir-dot-in .38s 1.62s ease-out forwards, p3-ir-dot-pulse 1.9s 2s ease-in-out infinite;
+    }
+
+    @keyframes p3-ir-dot-in {
+      from { opacity: 0; transform: scale(.2); transform-origin: center; }
+      to { opacity: 1; transform: scale(1); transform-origin: center; }
+    }
+
+    @keyframes p3-ir-dot-pulse {
+      0%, 100% { filter: drop-shadow(0 0 0 rgba(98,243,166,0)); }
+      50% { filter: drop-shadow(0 0 9px rgba(98,243,166,.9)); }
+    }
+
+    .p3-ir-chart-tag {
+      position: absolute;
+      z-index: 3;
+      padding: 5px 8px;
+      border-radius: 8px;
+      font-size: 9px;
+      line-height: 1;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .p3-ir-chart-tag.waste {
+      top: 19px;
+      right: 24px;
+      color: #ff9a92;
+      background: rgba(81,21,17,.83);
+    }
+
+    .p3-ir-chart-tag.goal {
+      top: 77px;
+      right: 24px;
+      color: #e4ece7;
+      border: 1px solid rgba(255,255,255,.13);
+      background: rgba(8,17,12,.86);
+    }
+
+    .p3-ir-chart-tag.agent {
+      right: 24px;
+      bottom: 17px;
+      color: #082516;
+      background: var(--green-2);
+      box-shadow: 0 7px 18px rgba(16,200,119,.22);
+    }
+
+    .p3-ir-gap {
+      position: absolute;
+      z-index: 3;
+      left: 23px;
+      top: 17px;
+      color: #82968a;
+      font-size: 9px;
+      font-weight: 760;
+      letter-spacing: .025em;
+    }
+
+    .p3-ir-gap strong {
+      display: block;
+      margin-top: 3px;
+      color: var(--green-2);
+      font-size: 19px;
+      letter-spacing: -.035em;
+      font-weight: 900;
+    }
+
+    .p3-ir-agent-foot {
+      min-height: 42px;
+      margin-top: 9px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .p3-ir-operating-loop {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: #84a391;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .p3-ir-operating-loop strong {
+      padding: 6px 8px;
+      border: 1px solid rgba(98,243,166,.13);
+      border-radius: 8px;
+      color: #c9e9d7;
+      background: rgba(16,200,119,.055);
+      font-size: 10px;
+      font-weight: 840;
+    }
+
+    .p3-ir-operating-loop i {
+      color: var(--green-2);
+      font-style: normal;
+      animation: p3-flow-pulse 1.7s ease-in-out infinite;
+    }
+
+    .p3-ir-scope {
+      margin: 0;
+      color: #72877b;
+      font-size: 8px;
+      line-height: 1.25;
+      font-weight: 720;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .p3-ir-scope strong {
+      display: block;
+      color: #9fb5a8;
+      font-size: 9px;
+      font-weight: 900;
+    }
+
+    .p3-ir-value {
+      flex: 0 0 64px;
+      min-height: 64px;
+      margin-top: 14px;
+      padding: 12px 19px;
+      display: grid;
+      grid-template-columns: 176px 1fr auto;
+      align-items: center;
+      gap: 22px;
+      border: 1px solid rgba(98,243,166,.22);
+      border-radius: 18px;
+      color: #f6fcf8;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(98,243,166,.16), transparent 35%),
+        #0b2b1b;
+      box-shadow: 0 17px 40px rgba(0,0,0,.24);
+    }
+
+    .p3-ir-value .label {
+      color: #91e8b9;
+    }
+
+    .p3-ir-value strong {
+      font-size: 21px;
+      line-height: 1.15;
+      letter-spacing: -.035em;
+      font-weight: 870;
+    }
+
+    .p3-ir-value strong span {
+      color: var(--green-2);
+    }
+
+    .p3-ir-value em {
+      color: #7ea58f;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 820;
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+
     /* Page 4 — Hardware / data flow */
     .hardware-title {
       margin-top: 34px;
@@ -3658,81 +4282,166 @@
             </div>
           </header>
 
-          <div class="p3-intro">
-            <p class="eyebrow reveal" style="--delay:.06s">Smart outlet → Energy agent</p>
-            <h2 class="p3-title reveal" style="--delay:.12s">전력을 보여주는 콘센트에서,<br><span>전기요금을 관리하는 Agent로</span></h2>
+          <div class="p3-ir-intro">
+            <div>
+              <p class="eyebrow reveal" style="--delay:.06s">From monitoring to measurable outcome</p>
+              <h2 class="p3-ir-title reveal" style="--delay:.12s">전력량을 보여주는 콘센트와,<br><span>목표 요금을 지키는 Agent의 차이</span></h2>
+            </div>
+            <p class="p3-ir-thesis reveal" style="--delay:.16s">측정은 숫자를 남깁니다.<strong>Agent는 비용의 방향을 바꿉니다.</strong></p>
           </div>
 
-          <div class="p3-compare">
-            <article class="p3-card p3-legacy reveal" style="--delay:.18s">
-              <div class="p3-card-head">
+          <div class="p3-ir-compare">
+            <article class="p3-ir-panel p3-ir-meter reveal" style="--delay:.2s">
+              <div class="p3-ir-panel-head">
                 <div>
-                  <span class="label">기존 서비스</span>
-                  <h3>전력량 측정 콘센트</h3>
+                  <span class="label">기존 전력량 측정 콘센트</span>
+                  <h3>보여주고, 여기서 끝</h3>
                 </div>
-                <span class="p3-mode">MEASURE → DISPLAY → END</span>
+                <span class="p3-ir-badge">DATA ONLY</span>
               </div>
 
-              <div class="p3-legacy-track" aria-label="현재 전력 측정, 누적 사용량 표시, 종료">
-                <div class="p3-legacy-step"><i>W</i><strong>현재 전력 측정</strong><span>Measure</span></div>
-                <div class="p3-legacy-step"><i>Σ</i><strong>누적 사용량 표시</strong><span>Display</span></div>
-                <div class="p3-legacy-step"><i>—</i><strong>여기서 종료</strong><span>End</span></div>
+              <div class="p3-ir-meter-visual" aria-label="현재 전력 500와트를 표시하는 측정 화면">
+                <div class="p3-ir-reading">
+                  <small>LIVE POWER</small>
+                  <strong><span data-count data-from="0" data-to="500" data-duration="850">500</span><em>W</em></strong>
+                  <span>현재 사용량 표시</span>
+                </div>
+                <div class="p3-ir-bars" aria-hidden="true">
+                  <i class="p3-ir-bar" style="--h:42%;--i:1"></i><i class="p3-ir-bar" style="--h:66%;--i:2"></i>
+                  <i class="p3-ir-bar" style="--h:52%;--i:3"></i><i class="p3-ir-bar" style="--h:81%;--i:4"></i>
+                  <i class="p3-ir-bar" style="--h:58%;--i:5"></i><i class="p3-ir-bar" style="--h:73%;--i:6"></i>
+                  <i class="p3-ir-bar" style="--h:48%;--i:7"></i><i class="p3-ir-bar" style="--h:88%;--i:8"></i>
+                  <i class="p3-ir-bar" style="--h:63%;--i:9"></i><i class="p3-ir-bar" style="--h:76%;--i:10"></i>
+                  <i class="p3-ir-bar" style="--h:55%;--i:11"></i><i class="p3-ir-bar" style="--h:82%;--i:12"></i>
+                </div>
               </div>
 
-              <div class="p3-legacy-limit">원인과 절감 방법은 사용자가 직접 판단합니다.</div>
-              <div class="p3-legacy-question">그래서 무엇을 줄여야 하지?</div>
+              <div class="p3-ir-dead-end" aria-label="측정, 표시 후 종료">
+                <span>측정</span><i>→</i><span>표시</span><i>→</i><span class="stop">×</span>
+              </div>
+              <div class="p3-ir-meter-caption"><span>누적 데이터는 남지만</span><strong>다음 행동은 없음</strong></div>
+              <p class="p3-ir-question">“그래서 무엇을 줄여야 하지?”</p>
             </article>
 
-            <article class="p3-card p3-agent reveal" style="--delay:.24s">
-              <div class="p3-card-head">
+            <div class="p3-ir-vs" aria-hidden="true"><span>VS</span></div>
+
+            <article class="p3-ir-panel p3-ir-agent reveal" style="--delay:.27s">
+              <div class="p3-ir-panel-head">
                 <div>
                   <span class="label">Bill-Cut Agent</span>
                   <h3>목표 요금 중심 에너지 운영</h3>
                 </div>
-                <span class="p3-mode">TARGET PRODUCT LOOP</span>
+                <span class="p3-ir-badge">GOAL-BASED</span>
               </div>
 
-              <p class="p3-chat">“이번 달 전기세가 왜 많이 나왔고,<br>5만 원 이하로 맞추려면 어떻게 해야 해?”</p>
-
-              <div class="p3-loop" aria-label="측정, 예측, 설명, 계획, 제어, 검증, 재계획의 목표 제품 루프">
-                <i class="p3-loop-rail" aria-hidden="true"></i>
-                <div class="p3-loop-node measure reveal" style="--delay:.3s"><i class="icon">⚡</i><div><strong>측정</strong><small>실제 전력·환경 수집</small></div></div>
-                <span class="p3-loop-arrow a1">→</span>
-                <div class="p3-loop-node forecast reveal" style="--delay:.36s"><i class="icon">₩</i><div><strong>예측</strong><small>월말 전기요금</small></div></div>
-                <span class="p3-loop-arrow a2">→</span>
-                <div class="p3-loop-node explain reveal" style="--delay:.42s"><i class="icon">Q</i><div><strong>설명</strong><small>자연어 질의응답</small></div></div>
-                <span class="p3-loop-arrow a3">→</span>
-                <div class="p3-loop-node plan reveal" style="--delay:.48s"><i class="icon">◎</i><div><strong>계획</strong><small>목표 설정·절감안</small></div></div>
-                <span class="p3-loop-arrow a4">↓</span>
-                <div class="p3-loop-node act planned reveal" style="--delay:.54s"><i class="icon">✓</i><div><strong>제어</strong><small>사용자 승인 후</small></div></div>
-                <span class="p3-loop-arrow a5">←</span>
-                <div class="p3-loop-node verify planned reveal" style="--delay:.6s"><i class="icon">↓</i><div><strong>검증</strong><small>전력 감소 확인</small></div></div>
-                <span class="p3-loop-arrow a6">←</span>
-                <div class="p3-loop-node replan planned reveal" style="--delay:.66s"><i class="icon">↺</i><div><strong>재계획</strong><small>부족 시 새 계획</small></div></div>
-                <span class="p3-loop-arrow a7">↺</span>
+              <div class="p3-ir-metrics" aria-label="목표 운영 시나리오 비교">
+                <div class="p3-ir-metric waste"><span>사용 패턴 유지</span><strong><span data-count data-from="0" data-to="58400" data-duration="1050">58,400</span><em>원</em></strong></div>
+                <div class="p3-ir-metric goal"><span>목표 요금</span><strong><span data-count data-from="0" data-to="55000" data-duration="1050">55,000</span><em>원</em></strong></div>
+                <div class="p3-ir-metric agent"><span>Agent 운영안</span><strong><span data-count data-from="0" data-to="44900" data-duration="1200">44,900</span><em>원</em></strong></div>
               </div>
 
-              <div class="p3-loop-signature">Measure → Forecast → Explain → Plan → Act → Verify → Replan</div>
-              <p class="p3-scope"><strong>Target product loop</strong> / 일부 기능 통합 예정</p>
+              <div class="p3-ir-chart" aria-label="사용 패턴 유지 시 목표 요금을 초과하고 Agent 운영안은 목표선 아래에 도달하는 시뮬레이션 그래프">
+                <span class="p3-ir-gap">목표 운영 시나리오<strong>13,500원 차이</strong></span>
+                <span class="p3-ir-chart-tag waste">그대로 사용하면 58,400원</span>
+                <span class="p3-ir-chart-tag goal">목표선 55,000원</span>
+                <span class="p3-ir-chart-tag agent">Agent plan · 44,900원</span>
+                <svg viewBox="0 0 720 180" preserveAspectRatio="none" aria-hidden="true">
+                  <line class="p3-ir-goal-line" x1="16" y1="88" x2="704" y2="88"></line>
+                  <path class="p3-ir-waste-path" d="M16 153 C150 145, 252 124, 354 96 S565 47, 704 28"></path>
+                  <path class="p3-ir-agent-path" d="M16 153 C150 145, 252 126, 354 111 S560 99, 704 108"></path>
+                  <circle class="p3-ir-waste-dot" cx="704" cy="28" r="7"></circle>
+                  <circle class="p3-ir-agent-dot" cx="704" cy="108" r="8"></circle>
+                </svg>
+              </div>
+
+              <div class="p3-ir-agent-foot">
+                <div class="p3-ir-operating-loop" aria-label="예측, 목표 비교, 계획, 검증">
+                  <strong>예측</strong><i>→</i><strong>목표 비교</strong><i>→</i><strong>계획</strong><i>→</i><strong>검증</strong>
+                </div>
+                <p class="p3-ir-scope"><strong>Target product loop</strong>/ 일부 기능 통합 예정</p>
+              </div>
             </article>
           </div>
 
-          <div class="p3-value reveal" style="--delay:.72s">
-            <span class="label">VALUE PROPOSITION</span>
-            <strong>전력을 보여주는 것이 아니라, 목표 전기요금을 달성하도록 에너지 사용을 운영합니다.</strong>
+          <div class="p3-ir-value reveal" style="--delay:.72s">
+            <span class="label">INVESTMENT THESIS</span>
+            <strong>측정 데이터는 기능입니다. <span>목표 요금 달성 경험이 제품입니다.</span></strong>
+            <em>PROTOTYPE SIMULATION</em>
           </div>
         </div>
       </section>
 
-      <!-- 04 · HARDWARE DEMO -->
-      <section class="slide light" data-slide="4" aria-label="4. 실제 동작 Demo" aria-roledescription="슬라이드" aria-hidden="true" inert>
+      <!-- 04 · LIVE DEMO -->
+      <section class="slide dark" data-slide="4" aria-label="4. Live Demo" aria-roledescription="슬라이드" aria-hidden="true" inert>
+        <div class="grain"></div>
+        <div class="slide-shell">
+          <header class="slide-head reveal">
+            <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Bill-Cut Agent</div>
+            <div class="slide-meta">
+              <span class="status plan">Live demo · External relay</span>
+              <span class="page-no">04 / 11</span>
+            </div>
+          </header>
+
+          <div class="live-title">
+            <p class="eyebrow reveal" style="--delay:.05s">Live demo runbook</p>
+            <h2 class="headline reveal" style="--delay:.11s">화면의 판단이 <span class="lime">실물 장치</span>로 이어지는 순간을 보여줍니다.</h2>
+          </div>
+
+          <div class="live-layout">
+            <div class="demo-sequence reveal" style="--delay:.17s">
+              <h3>6-STEP PRESENTATION FLOW</h3>
+              <div class="demo-step" data-step="01"><strong>Dashboard 실행</strong><span>현재 프로토타입 화면 진입</span></div>
+              <div class="demo-step" data-step="02"><strong>현재 전력 확인</strong><span>컴퓨터 소비전력 상태 설명</span></div>
+              <div class="demo-step" data-step="03"><strong>목표 요금 입력</strong><span>사용자 기준을 의사결정에 전달</span></div>
+              <div class="demo-step" data-step="04"><strong>Agent 분석</strong><span>예측·시나리오·계획 목표 시연</span></div>
+              <div class="demo-step" data-step="05"><strong>실물 장치 라이브 카메라</strong><span>makerton live relay로 장치 확인</span></div>
+              <div class="demo-step" data-step="06"><strong>결과 확인</strong><span>제어·검증은 계획 범위를 명시</span></div>
+            </div>
+
+            <div class="relay-stage reveal" style="--delay:.23s" id="relayStage" data-no-advance>
+              <div class="relay-placeholder">
+                <div class="relay-rings"></div>
+                <div class="relay-copy">
+                  <div class="relay-icon">◉</div>
+                  <h3>Phone → Stage Live Relay</h3>
+                  <p>기본 동선은 공개 WebRTC 릴레이를 새 탭으로 여는 방식입니다. QR이 보이지 않으면 페이지의 주소 복사 방식으로 휴대폰을 연결하고, 이 페이지의 iframe은 리허설용 보조 미리보기로만 사용하세요.</p>
+                  <div class="relay-actions">
+                    <a class="relay-btn primary" href="https://brightwindow.github.io/makerton-live-relay/" target="_blank" rel="noopener noreferrer" data-no-advance>LIVE CAMERA 새 탭 열기 ↗</a>
+                    <button class="relay-btn" id="loadRelay" type="button" data-no-advance>이 화면에 미리보기</button>
+                    <button class="relay-btn" id="copyRelayUrl" type="button" data-no-advance>URL 복사</button>
+                  </div>
+                  <div class="relay-url-row"><code id="relayUrlText">https://brightwindow.github.io/makerton-live-relay/</code><span class="copy-status" id="copyStatus" aria-live="polite"></span></div>
+                </div>
+              </div>
+              <iframe
+                id="relayFrame"
+                class="relay-frame"
+                title="Makerton live camera relay"
+                data-src="https://brightwindow.github.io/makerton-live-relay/"
+                allow="camera; microphone; autoplay; fullscreen"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+              <div class="relay-topline"><span>EXTERNAL LIVE RELAY</span><span>F: FULLSCREEN · M: MUTE · S: SNAPSHOT</span></div>
+            </div>
+          </div>
+
+          <div class="live-sources">
+            <span>Prototype 화면과 실물 장치를 함께 보여주되, 미구현 Closed Loop는 시연 범위에서 분리합니다.</span>
+            <span>Reference: <a href="https://github.com/brightwindow/makerton-skills" target="_blank" rel="noopener noreferrer" data-no-advance>makerton-skills</a> · <a href="https://brightwindow.github.io/makerton-live-relay/" target="_blank" rel="noopener noreferrer" data-no-advance>live relay</a></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 · HARDWARE DEMO -->
+      <section class="slide light" data-slide="5" aria-label="5. 실제 동작 Demo" aria-roledescription="슬라이드" aria-hidden="true" inert>
         <div class="grain"></div>
         <div class="slide-shell">
           <header class="slide-head reveal">
             <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Bill-Cut Agent</div>
             <div class="slide-meta">
               <span class="status">Prototype hardware · Verified components</span>
-              <span class="page-no">04 / 11</span>
+              <span class="page-no">05 / 11</span>
             </div>
           </header>
 
@@ -3783,15 +4492,15 @@
         </div>
       </section>
 
-      <!-- 05 · PRODUCT DEMO -->
-      <section class="slide dark dashboard-page" data-slide="5" aria-label="5. Product Demo" aria-roledescription="슬라이드" aria-hidden="true" inert>
+      <!-- 06 · PRODUCT DEMO -->
+      <section class="slide dark dashboard-page" data-slide="6" aria-label="6. Product Demo" aria-roledescription="슬라이드" aria-hidden="true" inert>
         <div class="grain"></div>
         <div class="slide-shell">
           <header class="slide-head reveal">
             <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Bill-Cut Agent</div>
             <div class="slide-meta">
               <span class="status target">Current UI prototype · Static mock data</span>
-              <span class="page-no">05 / 11</span>
+              <span class="page-no">06 / 11</span>
             </div>
           </header>
 
@@ -3880,15 +4589,15 @@
         <div class="dashboard-disclaimer"><span>* 예측값은 실제 청구액이 아니며 계약·지역·세금·요금표에 따라 달라질 수 있습니다.</span><strong>STATIC MOCK SET: 486W · 247.6kWh · 55,000원 → 58,400원</strong></div>
       </section>
 
-      <!-- 06 · AGENT INTELLIGENCE -->
-      <section class="slide light" data-slide="6" aria-label="6. Agent Intelligence" aria-roledescription="슬라이드" aria-hidden="true" inert>
+      <!-- 07 · AGENT INTELLIGENCE -->
+      <section class="slide light" data-slide="7" aria-label="7. Agent Intelligence" aria-roledescription="슬라이드" aria-hidden="true" inert>
         <div class="grain"></div>
         <div class="slide-shell">
           <header class="slide-head reveal">
             <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Bill-Cut Agent</div>
             <div class="slide-meta">
               <span class="status target">Agent orchestration · Implementation target</span>
-              <span class="page-no">06 / 11</span>
+              <span class="page-no">07 / 11</span>
             </div>
           </header>
 
@@ -3930,15 +4639,15 @@
         </div>
       </section>
 
-      <!-- 07 · BUSINESS MODEL -->
-      <section class="slide dark" data-slide="7" aria-label="7. Business Model" aria-roledescription="슬라이드" aria-hidden="true" inert>
+      <!-- 08 · BUSINESS MODEL -->
+      <section class="slide dark" data-slide="8" aria-label="8. Business Model" aria-roledescription="슬라이드" aria-hidden="true" inert>
         <div class="grain"></div>
         <div class="slide-shell">
           <header class="slide-head reveal">
             <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Bill-Cut Agent</div>
             <div class="slide-meta">
               <span class="status target">Business model · Hypothesis</span>
-              <span class="page-no">07 / 11</span>
+              <span class="page-no">08 / 11</span>
             </div>
           </header>
 
@@ -3979,15 +4688,15 @@
         </div>
       </section>
 
-      <!-- 08 · MARKET & EXPANSION -->
-      <section class="slide light" data-slide="8" aria-label="8. Market and Expansion" aria-roledescription="슬라이드" aria-hidden="true" inert>
+      <!-- 09 · MARKET & EXPANSION -->
+      <section class="slide light" data-slide="9" aria-label="9. Market and Expansion" aria-roledescription="슬라이드" aria-hidden="true" inert>
         <div class="grain"></div>
         <div class="slide-shell">
           <header class="slide-head reveal">
             <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Bill-Cut Agent</div>
             <div class="slide-meta">
               <span class="status plan">Expansion plan</span>
-              <span class="page-no">08 / 11</span>
+              <span class="page-no">09 / 11</span>
             </div>
           </header>
 
@@ -4021,15 +4730,15 @@
         </div>
       </section>
 
-      <!-- 09 · ESG -->
-      <section class="slide green-wash" data-slide="9" aria-label="9. Sustainability and ESG" aria-roledescription="슬라이드" aria-hidden="true" inert>
+      <!-- 10 · ESG -->
+      <section class="slide green-wash" data-slide="10" aria-label="10. Sustainability and ESG" aria-roledescription="슬라이드" aria-hidden="true" inert>
         <div class="grain"></div>
         <div class="slide-shell">
           <header class="slide-head reveal">
             <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Bill-Cut Agent</div>
             <div class="slide-meta">
               <span class="status target">Expected impact · Validation needed</span>
-              <span class="page-no">09 / 11</span>
+              <span class="page-no">10 / 11</span>
             </div>
           </header>
 
@@ -4053,15 +4762,15 @@
         </div>
       </section>
 
-      <!-- 10 · CROWDFUNDING -->
-      <section class="slide light crowd-page" data-slide="10" aria-label="10. Crowdfunding Page" aria-roledescription="슬라이드" aria-hidden="true" inert>
+      <!-- 11 · CROWDFUNDING -->
+      <section class="slide light crowd-page" data-slide="11" aria-label="11. Crowdfunding Page" aria-roledescription="슬라이드" aria-hidden="true" inert>
         <div class="grain"></div>
         <div class="slide-shell">
           <header class="slide-head reveal">
             <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Bill-Cut Agent</div>
             <div class="slide-meta">
               <span class="status caution">Campaign preview · Not yet on sale</span>
-              <span class="page-no">10 / 11</span>
+              <span class="page-no">11 / 11</span>
             </div>
           </header>
 
@@ -4095,73 +4804,11 @@
                 <div class="milestone">PLANNED<br>제조 · 인증 · 배송</div>
               </div>
 
-              <button class="action-link reveal" style="--delay:.38s" type="button" data-go="11" data-no-advance>
+              <button class="action-link reveal" style="--delay:.38s" type="button" data-go="4" data-no-advance>
                 <span>EARLY SUPPORTER가 볼 라이브 데모로 이동</span><span>→</span>
               </button>
               <p class="crowd-legal reveal" style="--delay:.41s">캠페인 프리뷰 · 결제/예약 판매 미개시 · 가격/배송/인증 일정 미정 · 절감액 보장 아님</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 11 · LIVE DEMO -->
-      <section class="slide dark" data-slide="11" aria-label="11. Live Demo" aria-roledescription="슬라이드" aria-hidden="true" inert>
-        <div class="grain"></div>
-        <div class="slide-shell">
-          <header class="slide-head reveal">
-            <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Bill-Cut Agent</div>
-            <div class="slide-meta">
-              <span class="status plan">Live demo · External relay</span>
-              <span class="page-no">11 / 11</span>
-            </div>
-          </header>
-
-          <div class="live-title">
-            <p class="eyebrow reveal" style="--delay:.05s">Live demo runbook</p>
-            <h2 class="headline reveal" style="--delay:.11s">화면의 판단이 <span class="lime">실물 장치</span>로 이어지는 순간을 보여줍니다.</h2>
-          </div>
-
-          <div class="live-layout">
-            <div class="demo-sequence reveal" style="--delay:.17s">
-              <h3>6-STEP PRESENTATION FLOW</h3>
-              <div class="demo-step" data-step="01"><strong>Dashboard 실행</strong><span>현재 프로토타입 화면 진입</span></div>
-              <div class="demo-step" data-step="02"><strong>현재 전력 확인</strong><span>컴퓨터 소비전력 상태 설명</span></div>
-              <div class="demo-step" data-step="03"><strong>목표 요금 입력</strong><span>사용자 기준을 의사결정에 전달</span></div>
-              <div class="demo-step" data-step="04"><strong>Agent 분석</strong><span>예측·시나리오·계획 목표 시연</span></div>
-              <div class="demo-step" data-step="05"><strong>실물 장치 라이브 카메라</strong><span>makerton live relay로 장치 확인</span></div>
-              <div class="demo-step" data-step="06"><strong>결과 확인</strong><span>제어·검증은 계획 범위를 명시</span></div>
-            </div>
-
-            <div class="relay-stage reveal" style="--delay:.23s" id="relayStage" data-no-advance>
-              <div class="relay-placeholder">
-                <div class="relay-rings"></div>
-                <div class="relay-copy">
-                  <div class="relay-icon">◉</div>
-                  <h3>Phone → Stage Live Relay</h3>
-                  <p>기본 동선은 공개 WebRTC 릴레이를 새 탭으로 여는 방식입니다. QR이 보이지 않으면 페이지의 주소 복사 방식으로 휴대폰을 연결하고, 이 페이지의 iframe은 리허설용 보조 미리보기로만 사용하세요.</p>
-                  <div class="relay-actions">
-                    <a class="relay-btn primary" href="https://brightwindow.github.io/makerton-live-relay/" target="_blank" rel="noopener noreferrer" data-no-advance>LIVE CAMERA 새 탭 열기 ↗</a>
-                    <button class="relay-btn" id="loadRelay" type="button" data-no-advance>이 화면에 미리보기</button>
-                    <button class="relay-btn" id="copyRelayUrl" type="button" data-no-advance>URL 복사</button>
-                  </div>
-                  <div class="relay-url-row"><code id="relayUrlText">https://brightwindow.github.io/makerton-live-relay/</code><span class="copy-status" id="copyStatus" aria-live="polite"></span></div>
-                </div>
-              </div>
-              <iframe
-                id="relayFrame"
-                class="relay-frame"
-                title="Makerton live camera relay"
-                data-src="https://brightwindow.github.io/makerton-live-relay/"
-                allow="camera; microphone; autoplay; fullscreen"
-                referrerpolicy="strict-origin-when-cross-origin"
-              ></iframe>
-              <div class="relay-topline"><span>EXTERNAL LIVE RELAY</span><span>F: FULLSCREEN · M: MUTE · S: SNAPSHOT</span></div>
-            </div>
-          </div>
-
-          <div class="live-sources">
-            <span>Prototype 화면과 실물 장치를 함께 보여주되, 미구현 Closed Loop는 시연 범위에서 분리합니다.</span>
-            <span>Reference: <a href="https://github.com/brightwindow/makerton-skills" target="_blank" rel="noopener noreferrer" data-no-advance>makerton-skills</a> · <a href="https://brightwindow.github.io/makerton-live-relay/" target="_blank" rel="noopener noreferrer" data-no-advance>live relay</a></span>
           </div>
         </div>
       </section>
@@ -4232,7 +4879,7 @@
       function runSlideEffects(slide) {
         slide.querySelectorAll("[data-count]").forEach(animateNumber);
 
-        if (slide.dataset.slide === "5" && !reduceMotion.matches) {
+        if (slide.dataset.slide === "6" && !reduceMotion.matches) {
           const power = document.getElementById("livePower");
           const values = [486, 472, 501, 488, 486];
           let index = 0;
