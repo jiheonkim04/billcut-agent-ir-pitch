@@ -3212,6 +3212,1350 @@
       background: linear-gradient(90deg, var(--green), transparent);
     }
 
+    /* Slide 8 only · Student beachhead business model */
+    .bm8-title {
+      flex: 0 0 104px;
+      margin-top: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 390px;
+      align-items: end;
+      gap: 42px;
+    }
+
+    .bm8-title .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .bm8-title h2 {
+      margin: 0;
+      color: #f5faf7;
+      font-size: 46px;
+      line-height: 1.03;
+      letter-spacing: -.052em;
+      font-weight: 900;
+    }
+
+    .bm8-title h2 span {
+      color: var(--green-2);
+    }
+
+    .bm8-beachhead {
+      min-height: 72px;
+      padding: 13px 17px 13px 66px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid rgba(98,243,166,.19);
+      border-radius: 18px;
+      color: #eef8f2;
+      background: rgba(16,200,119,.07);
+    }
+
+    .bm8-beachhead::before {
+      content: "U";
+      position: absolute;
+      left: 16px;
+      width: 37px;
+      height: 37px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      color: #062315;
+      background: var(--green-2);
+      font-size: 16px;
+      font-weight: 900;
+      box-shadow: 0 8px 24px rgba(16,200,119,.2);
+    }
+
+    .bm8-beachhead small {
+      color: #78a88d;
+      font-size: 9px;
+      font-weight: 880;
+      letter-spacing: .075em;
+    }
+
+    .bm8-beachhead strong {
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 1.15;
+      letter-spacing: -.025em;
+      font-weight: 860;
+    }
+
+    .bm8-journey {
+      flex: 0 0 164px;
+      height: 164px;
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr 22px 1fr 22px .96fr 22px 1.32fr 22px .95fr 22px 1.04fr;
+      align-items: stretch;
+    }
+
+    .bm8-node {
+      position: relative;
+      min-width: 0;
+      padding: 15px 13px 13px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 18px;
+      color: #dce6e0;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.052), rgba(255,255,255,.018)),
+        rgba(5,14,9,.72);
+    }
+
+    .bm8-node::after {
+      content: "";
+      position: absolute;
+      left: 13px;
+      right: 13px;
+      bottom: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: rgba(255,255,255,.12);
+    }
+
+    .bm8-node .phase {
+      display: block;
+      color: #667970;
+      font-size: 8px;
+      font-weight: 900;
+      letter-spacing: .09em;
+    }
+
+    .bm8-node .icon {
+      width: 34px;
+      height: 34px;
+      margin-top: 9px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.11);
+      border-radius: 11px;
+      color: #b9c7bf;
+      background: rgba(255,255,255,.045);
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    .bm8-node strong {
+      display: block;
+      margin-top: 9px;
+      color: #f0f5f2;
+      font-size: 15px;
+      line-height: 1.08;
+      letter-spacing: -.03em;
+      font-weight: 860;
+    }
+
+    .bm8-node p {
+      margin: 6px 0 0;
+      color: #7d8f85;
+      font-size: 9px;
+      line-height: 1.32;
+      font-weight: 680;
+    }
+
+    .bm8-node.kit {
+      border-color: rgba(255,184,73,.19);
+      background:
+        radial-gradient(circle at 90% 0%, rgba(255,184,73,.1), transparent 42%),
+        rgba(20,16,8,.74);
+    }
+
+    .bm8-node.kit::after { background: var(--amber); }
+    .bm8-node.kit .icon { color: #ffc36d; border-color: rgba(255,184,73,.18); }
+
+    .bm8-node.free {
+      border-color: rgba(143,219,244,.16);
+    }
+
+    .bm8-node.free::after { background: #7dcce6; }
+    .bm8-node.free .icon { color: #8bd8ef; }
+
+    .bm8-node.agent {
+      z-index: 2;
+      border-color: rgba(98,243,166,.38);
+      color: #effaf3;
+      background:
+        radial-gradient(circle at 87% 0%, rgba(98,243,166,.19), transparent 42%),
+        linear-gradient(145deg, #0c4027, #061d11);
+      box-shadow: 0 20px 45px rgba(0,0,0,.28);
+      transform: translateY(-5px);
+      height: calc(100% + 10px);
+    }
+
+    .bm8-node.agent::after {
+      height: 3px;
+      background: var(--green-2);
+      box-shadow: 0 0 18px rgba(98,243,166,.45);
+    }
+
+    .bm8-node.agent .phase { color: #77daa2; }
+    .bm8-node.agent .icon {
+      color: #052415;
+      border-color: var(--green-2);
+      background: var(--green-2);
+    }
+
+    .bm8-node.agent strong {
+      color: #ffffff;
+      font-size: 17px;
+    }
+
+    .bm8-node.agent p {
+      color: #9fc7af;
+      font-size: 10px;
+    }
+
+    .bm8-node.proof::after { background: #e7f2eb; }
+    .bm8-node.proof .icon { color: var(--green-2); }
+
+    .bm8-node.scale {
+      background:
+        radial-gradient(circle at 50% 100%, rgba(98,243,166,.11), transparent 52%),
+        rgba(5,14,9,.74);
+    }
+
+    .bm8-node.scale::after { background: linear-gradient(90deg, var(--green-2), #8bd8ef); }
+
+    .bm8-spread {
+      position: absolute;
+      right: 12px;
+      top: 13px;
+      width: 38px;
+      height: 30px;
+    }
+
+    .bm8-spread i {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green-2);
+      box-shadow: 0 0 8px rgba(98,243,166,.42);
+    }
+
+    .bm8-spread i:nth-child(1) { left: 0; top: 13px; }
+    .bm8-spread i:nth-child(2) { left: 16px; top: 2px; }
+    .bm8-spread i:nth-child(3) { right: 0; top: 15px; }
+    .bm8-spread i:nth-child(4) { left: 17px; bottom: 0; }
+
+    .slide.active .bm8-spread i {
+      animation: bm8-campus-pulse 1.9s ease-in-out infinite;
+    }
+
+    .slide.active .bm8-spread i:nth-child(2) { animation-delay: -.35s; }
+    .slide.active .bm8-spread i:nth-child(3) { animation-delay: -.7s; }
+    .slide.active .bm8-spread i:nth-child(4) { animation-delay: -1.05s; }
+
+    @keyframes bm8-campus-pulse {
+      0%, 100% { opacity: .34; transform: scale(.72); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    .bm8-arrow {
+      display: grid;
+      place-items: center;
+      color: #476052;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    .slide.active .bm8-arrow {
+      animation: bm8-flow 1.8s ease-in-out infinite;
+    }
+
+    .slide.active .bm8-arrow.a2 { animation-delay: -.3s; }
+    .slide.active .bm8-arrow.a3 { animation-delay: -.6s; }
+    .slide.active .bm8-arrow.a4 { animation-delay: -.9s; }
+    .slide.active .bm8-arrow.a5 { animation-delay: -1.2s; }
+
+    @keyframes bm8-flow {
+      0%, 100% { color: #3e5749; transform: translateX(-2px); }
+      50% { color: var(--green-2); transform: translateX(2px); }
+    }
+
+    .bm8-bottom {
+      flex: 0 0 264px;
+      height: 264px;
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1.46fr .78fr;
+      gap: 16px;
+    }
+
+    .bm8-offers {
+      min-width: 0;
+      padding: 13px;
+      display: grid;
+      grid-template-rows: 58px 58px 1fr;
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 20px;
+      background: rgba(255,255,255,.024);
+    }
+
+    .bm8-offer {
+      min-width: 0;
+      padding: 8px 10px;
+      display: grid;
+      grid-template-columns: 37px 174px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 11px;
+      border: 1px solid rgba(255,255,255,.075);
+      border-radius: 12px;
+      background: rgba(255,255,255,.024);
+    }
+
+    .bm8-offer-icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      color: #c2d0c8;
+      background: rgba(255,255,255,.055);
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .bm8-offer h3 {
+      margin: 0;
+      color: #edf4ef;
+      font-size: 14px;
+      line-height: 1.05;
+      letter-spacing: -.025em;
+      font-weight: 850;
+    }
+
+    .bm8-offer h3 small {
+      display: block;
+      margin-top: 5px;
+      color: #71847a;
+      font-size: 8px;
+      font-weight: 720;
+      letter-spacing: .015em;
+    }
+
+    .bm8-offer-copy {
+      color: #8fa098;
+      font-size: 10px;
+      line-height: 1.32;
+      font-weight: 680;
+    }
+
+    .bm8-revenue-tag {
+      padding: 6px 8px;
+      border-radius: 8px;
+      font-size: 8px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .055em;
+      white-space: nowrap;
+    }
+
+    .bm8-offer.kit .bm8-offer-icon {
+      color: #ffc36d;
+      background: rgba(255,184,73,.09);
+    }
+
+    .bm8-offer.kit .bm8-revenue-tag {
+      color: #f5bf69;
+      border: 1px solid rgba(255,184,73,.18);
+      background: rgba(255,184,73,.07);
+    }
+
+    .bm8-offer.free .bm8-offer-icon {
+      color: #8bd8ef;
+      background: rgba(125,204,230,.08);
+    }
+
+    .bm8-offer.free .bm8-revenue-tag {
+      color: #8cb2a0;
+      border: 1px solid rgba(255,255,255,.09);
+      background: rgba(255,255,255,.035);
+    }
+
+    .bm8-offer.agent {
+      padding-top: 9px;
+      padding-bottom: 9px;
+      border-color: rgba(98,243,166,.2);
+      background: rgba(16,200,119,.055);
+    }
+
+    .bm8-offer.agent .bm8-offer-icon {
+      color: #062315;
+      background: var(--green-2);
+      box-shadow: 0 6px 18px rgba(16,200,119,.16);
+    }
+
+    .bm8-offer.agent .bm8-revenue-tag {
+      color: #062315;
+      background: var(--green-2);
+      box-shadow: 0 6px 18px rgba(16,200,119,.14);
+    }
+
+    .bm8-agent-features {
+      min-width: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .bm8-agent-features span {
+      padding: 5px 7px;
+      border: 1px solid rgba(98,243,166,.12);
+      border-radius: 7px;
+      color: #b9d5c5;
+      background: rgba(4,20,11,.45);
+      font-size: 8px;
+      line-height: 1;
+      font-weight: 760;
+      white-space: nowrap;
+    }
+
+    .bm8-gtm {
+      position: relative;
+      min-width: 0;
+      padding: 15px;
+      overflow: hidden;
+      border: 1px solid rgba(98,243,166,.15);
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(98,243,166,.12), transparent 42%),
+        rgba(7,22,13,.72);
+    }
+
+    .bm8-gtm-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .bm8-gtm-head span {
+      color: #71877a;
+      font-size: 8px;
+      font-weight: 880;
+      letter-spacing: .07em;
+    }
+
+    .bm8-gtm-head strong {
+      color: #eef8f2;
+      font-size: 14px;
+      letter-spacing: -.02em;
+    }
+
+    .bm8-gtm-grid {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .bm8-gtm-step {
+      min-height: 80px;
+      padding: 11px 10px 10px 40px;
+      position: relative;
+      border: 1px solid rgba(255,255,255,.075);
+      border-radius: 12px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .bm8-gtm-step i {
+      position: absolute;
+      left: 10px;
+      top: 11px;
+      width: 22px;
+      height: 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 7px;
+      color: var(--green-2);
+      background: rgba(16,200,119,.09);
+      font-size: 8px;
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    .bm8-gtm-step strong {
+      display: block;
+      color: #dce9e1;
+      font-size: 11px;
+      line-height: 1.15;
+      font-weight: 830;
+    }
+
+    .bm8-gtm-step small {
+      display: block;
+      margin-top: 6px;
+      color: #71837a;
+      font-size: 8px;
+      line-height: 1.25;
+      font-weight: 680;
+    }
+
+    .bm8-plan-note {
+      position: absolute;
+      right: 15px;
+      bottom: 9px;
+      color: #60766a;
+      font-size: 7px;
+      font-weight: 820;
+      letter-spacing: .05em;
+    }
+
+    .bm8-value {
+      flex: 0 0 58px;
+      min-height: 58px;
+      margin-top: 12px;
+      padding: 10px 18px;
+      display: grid;
+      grid-template-columns: 170px 1fr auto;
+      align-items: center;
+      gap: 20px;
+      border: 1px solid rgba(98,243,166,.19);
+      border-radius: 16px;
+      color: #f5faf7;
+      background:
+        linear-gradient(90deg, rgba(16,200,119,.13), rgba(16,200,119,.035)),
+        #0a2115;
+    }
+
+    .bm8-value .label {
+      color: #8edfb3;
+    }
+
+    .bm8-value strong {
+      font-size: 20px;
+      line-height: 1.15;
+      letter-spacing: -.035em;
+      font-weight: 870;
+    }
+
+    .bm8-value strong span {
+      color: var(--green-2);
+    }
+
+    .bm8-value small {
+      color: #6f8e7d;
+      font-size: 8px;
+      font-weight: 820;
+      letter-spacing: .055em;
+      white-space: nowrap;
+    }
+
+    /* Slides 8–10 only · Readability and evidence-led IR refinement */
+    .bm8-compact .bm8-title {
+      flex-basis: 110px;
+      grid-template-columns: minmax(0, 1fr) 360px;
+    }
+
+    .bm8-compact .bm8-title h2 {
+      font-size: 54px;
+      line-height: 1.01;
+    }
+
+    .bm8-compact .bm8-beachhead {
+      min-height: 78px;
+    }
+
+    .bm8-compact .bm8-beachhead strong {
+      font-size: 19px;
+    }
+
+    .bm8-compact .bm8-journey {
+      flex-basis: 150px;
+      height: 150px;
+      margin-top: 12px;
+    }
+
+    .bm8-compact .bm8-node {
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .bm8-compact .bm8-node .icon {
+      width: 38px;
+      height: 38px;
+      margin-top: 9px;
+      font-size: 12px;
+    }
+
+    .bm8-compact .bm8-node strong {
+      margin-top: 10px;
+      font-size: 18px;
+      line-height: 1.08;
+    }
+
+    .bm8-compact .bm8-node.agent strong {
+      font-size: 20px;
+    }
+
+    .bm8-products {
+      flex: 0 0 222px;
+      height: 222px;
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: .9fr .9fr 1.35fr;
+      gap: 14px;
+    }
+
+    .bm8-product {
+      min-width: 0;
+      padding: 20px 20px 17px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 22px;
+      color: #eef4f0;
+      background: rgba(255,255,255,.028);
+    }
+
+    .bm8-product-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .bm8-product-head span {
+      color: #72857a;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .07em;
+    }
+
+    .bm8-product-head b {
+      padding: 7px 9px;
+      border-radius: 8px;
+      font-size: 9px;
+      line-height: 1;
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+
+    .bm8-product h3 {
+      margin: 20px 0 0;
+      font-size: 25px;
+      line-height: 1.05;
+      letter-spacing: -.04em;
+      font-weight: 880;
+    }
+
+    .bm8-product ul {
+      margin: 17px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .bm8-product li {
+      position: relative;
+      padding-left: 17px;
+      color: #aab8b0;
+      font-size: 16px;
+      line-height: 1.18;
+      font-weight: 700;
+    }
+
+    .bm8-product li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #71847a;
+    }
+
+    .bm8-product.kit {
+      border-color: rgba(255,184,73,.21);
+      background: linear-gradient(145deg, rgba(255,184,73,.08), rgba(255,255,255,.018));
+    }
+
+    .bm8-product.kit .bm8-product-head b {
+      color: #ffc36d;
+      background: rgba(255,184,73,.09);
+    }
+
+    .bm8-product.kit li::before { background: var(--amber); }
+
+    .bm8-product.free {
+      border-color: rgba(125,204,230,.18);
+    }
+
+    .bm8-product.free .bm8-product-head b {
+      color: #8bd8ef;
+      background: rgba(125,204,230,.08);
+    }
+
+    .bm8-product.free li::before { background: #7dcce6; }
+
+    .bm8-product.agent {
+      border-color: rgba(98,243,166,.3);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(98,243,166,.14), transparent 42%),
+        #092718;
+      box-shadow: 0 18px 40px rgba(0,0,0,.2);
+    }
+
+    .bm8-product.agent .bm8-product-head span { color: #82dca9; }
+
+    .bm8-product.agent .bm8-product-head b {
+      color: #062315;
+      background: var(--green-2);
+    }
+
+    .bm8-product.agent h3 { color: #ffffff; }
+    .bm8-product.agent li { color: #c6ddcf; }
+    .bm8-product.agent li::before { background: var(--green-2); }
+
+    .bm8-compact-footer {
+      flex: 0 0 68px;
+      min-height: 68px;
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 14px;
+    }
+
+    .bm8-gtm-rail,
+    .bm8-compact-thesis {
+      min-width: 0;
+      padding: 12px 17px;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 16px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .bm8-gtm-rail {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .bm8-gtm-rail .label {
+      margin-right: 5px;
+      color: #7fcfa3;
+      white-space: nowrap;
+    }
+
+    .bm8-gtm-rail strong {
+      color: #dce8e1;
+      font-size: 15px;
+      font-weight: 820;
+      white-space: nowrap;
+    }
+
+    .bm8-gtm-rail i {
+      color: var(--green-2);
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    .bm8-compact-thesis {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-color: rgba(98,243,166,.2);
+      background: rgba(16,200,119,.07);
+    }
+
+    .bm8-compact-thesis small {
+      color: #75a98b;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .07em;
+    }
+
+    .bm8-compact-thesis strong {
+      margin-top: 5px;
+      color: #f3fbf6;
+      font-size: 18px;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+    }
+
+    .bm8-compact-thesis strong span { color: var(--green-2); }
+
+    .m9-title {
+      flex: 0 0 105px;
+      margin-top: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 390px;
+      align-items: end;
+      gap: 42px;
+    }
+
+    .m9-title .eyebrow { margin-bottom: 8px; }
+
+    .m9-title h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 49px;
+      line-height: 1.03;
+      letter-spacing: -.052em;
+      font-weight: 900;
+    }
+
+    .m9-title h2 span { color: var(--green-dark); }
+
+    .m9-thesis {
+      margin: 0 0 5px;
+      padding-left: 20px;
+      border-left: 2px solid var(--green);
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.4;
+      font-weight: 680;
+    }
+
+    .m9-thesis strong {
+      display: block;
+      margin-top: 4px;
+      color: var(--ink);
+      font-size: 21px;
+      font-weight: 860;
+    }
+
+    .m9-stages {
+      flex: 0 0 385px;
+      height: 385px;
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .m9-stage {
+      position: relative;
+      min-width: 0;
+      padding: 22px;
+      overflow: hidden;
+      border: 1px solid #dce5de;
+      border-radius: 25px;
+      background: rgba(255,255,255,.84);
+      box-shadow: 0 16px 34px rgba(9,17,13,.07);
+    }
+
+    .m9-stage.current {
+      color: #eef8f2;
+      border-color: var(--ink);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(98,243,166,.16), transparent 42%),
+        var(--ink);
+    }
+
+    .m9-stage.next {
+      border-color: rgba(16,200,119,.28);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(16,200,119,.1), transparent 42%),
+        #f9fcf9;
+    }
+
+    .m9-stage-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .m9-stage-no {
+      color: rgba(16,200,119,.18);
+      font-size: 54px;
+      line-height: .8;
+      letter-spacing: -.07em;
+      font-weight: 900;
+    }
+
+    .m9-stage-badge {
+      padding: 7px 9px;
+      border: 1px solid rgba(9,17,13,.1);
+      border-radius: 8px;
+      color: var(--muted);
+      background: rgba(255,255,255,.65);
+      font-size: 9px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .055em;
+    }
+
+    .m9-stage.current .m9-stage-badge {
+      color: var(--green-2);
+      border-color: rgba(98,243,166,.18);
+      background: rgba(98,243,166,.06);
+    }
+
+    .m9-stage h3 {
+      margin: 24px 0 0;
+      color: var(--ink);
+      font-size: 26px;
+      line-height: 1.05;
+      letter-spacing: -.04em;
+      font-weight: 880;
+    }
+
+    .m9-stage.current h3 { color: #ffffff; }
+
+    .m9-stage-lede {
+      margin: 11px 0 0;
+      min-height: 43px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.42;
+      font-weight: 650;
+    }
+
+    .m9-stage.current .m9-stage-lede { color: #99aca0; }
+
+    .m9-device-row {
+      margin-top: 17px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .m9-device-row span {
+      padding: 7px 9px;
+      border: 1px solid #dce5de;
+      border-radius: 8px;
+      color: var(--green-dark);
+      background: #f1f8f3;
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 850;
+    }
+
+    .m9-stage.current .m9-device-row span {
+      color: var(--green-2);
+      border-color: rgba(98,243,166,.15);
+      background: rgba(98,243,166,.055);
+    }
+
+    .m9-gates {
+      margin: 18px 0 0;
+      padding: 15px 0 0;
+      display: grid;
+      gap: 10px;
+      border-top: 1px solid rgba(9,17,13,.1);
+      list-style: none;
+    }
+
+    .m9-stage.current .m9-gates { border-top-color: rgba(255,255,255,.1); }
+
+    .m9-gates li {
+      position: relative;
+      padding-left: 18px;
+      color: #65766d;
+      font-size: 13px;
+      line-height: 1.22;
+      font-weight: 720;
+    }
+
+    .m9-stage.current .m9-gates li { color: #b5c3ba; }
+
+    .m9-gates li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      color: var(--green);
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .m9-stage-status {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #84948b;
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .045em;
+    }
+
+    .m9-stage-status i {
+      flex: 1;
+      height: 2px;
+      margin-left: 12px;
+      overflow: hidden;
+      border-radius: 2px;
+      background: #dce5de;
+    }
+
+    .m9-stage-status i::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--green), var(--cyan));
+    }
+
+    .m9-stage.current .m9-stage-status { color: #8ea398; }
+    .m9-stage.current .m9-stage-status i { background: rgba(255,255,255,.09); }
+    .m9-stage.next .m9-stage-status i::after { opacity: .52; }
+    .m9-stage:not(.current):not(.next) .m9-stage-status i::after { opacity: .2; }
+
+    .m9-platform {
+      flex: 0 0 102px;
+      min-height: 102px;
+      margin-top: 14px;
+      padding: 15px 18px;
+      display: grid;
+      grid-template-columns: 170px 1fr 300px;
+      align-items: center;
+      gap: 20px;
+      border: 1px solid rgba(16,200,119,.2);
+      border-radius: 20px;
+      background:
+        linear-gradient(90deg, rgba(16,200,119,.08), rgba(93,225,209,.04)),
+        #f8fbf8;
+    }
+
+    .m9-platform-label small {
+      display: block;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .07em;
+    }
+
+    .m9-platform-label strong {
+      display: block;
+      margin-top: 6px;
+      color: var(--ink);
+      font-size: 20px;
+      letter-spacing: -.035em;
+    }
+
+    .m9-platform-flow {
+      display: grid;
+      grid-template-columns: 1fr 24px 1fr 24px 1fr;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .m9-platform-flow span {
+      min-height: 48px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #d7e5dc;
+      border-radius: 12px;
+      color: var(--green-dark);
+      background: #fff;
+      font-size: 12px;
+      font-weight: 850;
+      text-align: center;
+    }
+
+    .m9-platform-flow i {
+      color: var(--green);
+      font-style: normal;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .m9-platform-value {
+      padding-left: 18px;
+      border-left: 1px solid rgba(9,17,13,.11);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.42;
+      font-weight: 650;
+    }
+
+    .m9-platform-value strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 850;
+    }
+
+    .e10-title {
+      flex: 0 0 112px;
+      margin-top: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 390px;
+      align-items: end;
+      gap: 42px;
+    }
+
+    .e10-title .eyebrow { margin-bottom: 8px; }
+
+    .e10-title h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 51px;
+      line-height: 1.03;
+      letter-spacing: -.052em;
+      font-weight: 900;
+    }
+
+    .e10-title h2 span { color: var(--green-dark); }
+
+    .e10-guardrail {
+      min-height: 76px;
+      padding: 13px 16px 13px 62px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid rgba(9,17,13,.12);
+      border-radius: 18px;
+      background: rgba(255,255,255,.58);
+    }
+
+    .e10-guardrail::before {
+      content: "✓";
+      position: absolute;
+      left: 16px;
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      color: #fff;
+      background: var(--ink);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .e10-guardrail small {
+      color: var(--green-dark);
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .07em;
+    }
+
+    .e10-guardrail strong {
+      margin-top: 5px;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.15;
+      letter-spacing: -.025em;
+    }
+
+    .e10-loop {
+      flex: 0 0 205px;
+      height: 205px;
+      margin-top: 15px;
+      display: grid;
+      grid-template-columns: 1fr 28px 1fr 28px 1fr 28px 1fr;
+      align-items: stretch;
+    }
+
+    .e10-step {
+      min-width: 0;
+      padding: 19px 18px;
+      border: 1px solid rgba(9,17,13,.11);
+      border-radius: 21px;
+      background: rgba(255,255,255,.66);
+      box-shadow: 0 13px 29px rgba(9,17,13,.055);
+    }
+
+    .e10-step-no {
+      display: inline-grid;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      border-radius: 10px;
+      color: var(--green-dark);
+      background: #e2f5e7;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .e10-step h3 {
+      margin: 17px 0 0;
+      color: var(--ink);
+      font-size: 23px;
+      letter-spacing: -.035em;
+      font-weight: 870;
+    }
+
+    .e10-step p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.38;
+      font-weight: 650;
+    }
+
+    .e10-arrow {
+      display: grid;
+      place-items: center;
+      color: var(--green);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    .slide.active .e10-arrow {
+      animation: bm8-flow 1.8s ease-in-out infinite;
+    }
+
+    .slide.active .e10-arrow.a2 { animation-delay: -.45s; }
+    .slide.active .e10-arrow.a3 { animation-delay: -.9s; }
+
+    .e10-bottom {
+      flex: 0 0 222px;
+      height: 222px;
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1.28fr .72fr;
+      gap: 16px;
+    }
+
+    .e10-outputs,
+    .e10-evidence {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid rgba(9,17,13,.11);
+      border-radius: 21px;
+      background: rgba(255,255,255,.6);
+    }
+
+    .e10-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .e10-panel-head strong {
+      color: var(--ink);
+      font-size: 16px;
+      letter-spacing: -.02em;
+    }
+
+    .e10-panel-head span {
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .06em;
+    }
+
+    .e10-output-grid {
+      margin-top: 13px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .e10-output {
+      min-height: 143px;
+      padding: 15px 13px;
+      border: 1px solid rgba(9,17,13,.085);
+      border-radius: 14px;
+      background: rgba(255,255,255,.66);
+    }
+
+    .e10-output b {
+      display: block;
+      color: var(--green-dark);
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: -.04em;
+      font-weight: 900;
+    }
+
+    .e10-output strong {
+      display: block;
+      margin-top: 14px;
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 840;
+    }
+
+    .e10-output small {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.3;
+      font-weight: 650;
+    }
+
+    .e10-evidence-flow {
+      margin-top: 15px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .e10-evidence-step {
+      min-height: 43px;
+      padding: 10px 12px 10px 43px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(9,17,13,.085);
+      border-radius: 11px;
+      color: #596b61;
+      background: rgba(255,255,255,.65);
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 730;
+    }
+
+    .e10-evidence-step i {
+      position: absolute;
+      left: 10px;
+      width: 23px;
+      height: 23px;
+      display: grid;
+      place-items: center;
+      border-radius: 7px;
+      color: #fff;
+      background: var(--green-dark);
+      font-size: 8px;
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    .e10-value {
+      flex: 0 0 58px;
+      min-height: 58px;
+      margin-top: 12px;
+      padding: 10px 18px;
+      display: grid;
+      grid-template-columns: 190px 1fr auto;
+      align-items: center;
+      gap: 18px;
+      border: 1px solid rgba(9,17,13,.13);
+      border-radius: 16px;
+      background: rgba(255,255,255,.62);
+    }
+
+    .e10-value .label { color: var(--green-dark); }
+
+    .e10-value strong {
+      color: var(--ink);
+      font-size: 20px;
+      line-height: 1.15;
+      letter-spacing: -.03em;
+      font-weight: 860;
+    }
+
+    .e10-value small {
+      color: var(--muted);
+      font-size: 8px;
+      font-weight: 850;
+      letter-spacing: .055em;
+      white-space: nowrap;
+    }
+
     /* Page 8 — Expansion */
     .expansion-title {
       margin-top: 41px;
@@ -4640,7 +5984,7 @@
       </section>
 
       <!-- 08 · BUSINESS MODEL -->
-      <section class="slide dark" data-slide="8" aria-label="8. Business Model" aria-roledescription="슬라이드" aria-hidden="true" inert>
+      <section class="slide dark bm8-compact" data-slide="8" aria-label="8. Business Model" aria-roledescription="슬라이드" aria-hidden="true" inert>
         <div class="grain"></div>
         <div class="slide-shell">
           <header class="slide-head reveal">
@@ -4651,40 +5995,55 @@
             </div>
           </header>
 
-          <div class="business-title">
-            <p class="eyebrow reveal" style="--delay:.05s">Business model</p>
-            <h2 class="headline reveal" style="--delay:.11s">Kit으로 시작해, Agent 구독과<br><span class="lime">관리 SaaS</span>로 확장합니다.</h2>
-          </div>
-
-          <div class="business-map">
-            <div class="customer-orbit reveal" style="--delay:.18s" aria-label="B2C와 B2B 고객 구조">
-              <div class="customer-ring"></div>
-              <div class="customer-core">GOAL-BASED<br>ENERGY</div>
-              <div class="customer-node c1">1인 가구<small>B2C</small></div>
-              <div class="customer-node c2">원룸 · 아파트<small>B2C</small></div>
-              <div class="customer-node c3">기숙사 · 오피스텔<small>B2B</small></div>
-              <div class="customer-node c4">학교<small>B2B</small></div>
+          <div class="bm8-title">
+            <div>
+              <p class="eyebrow reveal" style="--delay:.05s">Beachhead customer · Campus go-to-market</p>
+              <h2 class="reveal" style="--delay:.11s">대학생의 전기요금을 관리하는<br><span>구독형 Energy Agent</span></h2>
             </div>
-
-            <div class="revenue-stack">
-              <article class="revenue-item reveal" style="--delay:.22s">
-                <span class="revenue-num">01</span>
-                <h3>Sensor Kit 판매</h3>
-                <p>전력 측정과 재실 맥락을 수집하는 초기 하드웨어 진입점</p>
-              </article>
-              <article class="revenue-item reveal" style="--delay:.27s">
-                <span class="revenue-num">02</span>
-                <h3>Energy Agent App 구독</h3>
-                <p>요금 예측·절감 시나리오·목표 요금 계획을 제공하는 반복 매출 모델</p>
-              </article>
-              <article class="revenue-item reveal" style="--delay:.32s">
-                <span class="revenue-num">03</span>
-                <h3>관리자 Dashboard SaaS</h3>
-                <p>기숙사·오피스텔·학교의 다중 공간 에너지 운영을 위한 확장 모델</p>
-              </article>
+            <div class="bm8-beachhead reveal" style="--delay:.15s">
+              <small>INITIAL CORE CUSTOMER</small>
+              <strong>전기요금을 직접 부담하는 대학생 자취생</strong>
             </div>
           </div>
-          <div class="business-foot reveal" style="--delay:.38s"><i></i>가격·수요·반복 매출 가설은 Early supporter와 Pilot에서 검증 예정</div>
+
+          <div class="bm8-journey" aria-label="대학생 자취생, Kit, 무료 모니터링, Agent 구독, 절감 사례, 교내 확산의 고객 여정">
+            <article class="bm8-node reveal" style="--delay:.18s"><span class="phase">CUSTOMER</span><i class="icon">U</i><strong>대학생<br>자취생</strong></article>
+            <i class="bm8-arrow a1">→</i>
+            <article class="bm8-node kit reveal" style="--delay:.22s"><span class="phase">INSTALL</span><i class="icon">KIT</i><strong>Kit 설치</strong></article>
+            <i class="bm8-arrow a2">→</i>
+            <article class="bm8-node free reveal" style="--delay:.26s"><span class="phase">FREE</span><i class="icon">W</i><strong>무료<br>모니터링</strong></article>
+            <i class="bm8-arrow a3">→</i>
+            <article class="bm8-node agent reveal" style="--delay:.3s"><span class="phase">RECURRING</span><i class="icon">AG</i><strong>Agent 구독</strong></article>
+            <i class="bm8-arrow a4">→</i>
+            <article class="bm8-node proof reveal" style="--delay:.34s"><span class="phase">PROOF</span><i class="icon">₩↓</i><strong>절감 사례</strong></article>
+            <i class="bm8-arrow a5">→</i>
+            <article class="bm8-node scale reveal" style="--delay:.38s"><span class="phase">SCALE</span><i class="icon">↗</i><strong>교내 확산</strong><span class="bm8-spread" aria-hidden="true"><i></i><i></i><i></i><i></i></span></article>
+          </div>
+
+          <div class="bm8-products reveal" style="--delay:.42s" aria-label="Kit, 무료 기능, Agent 구독 상품 구조">
+            <article class="bm8-product kit">
+              <div class="bm8-product-head"><span>01 · HARDWARE</span><b>초기·학기 매출</b></div>
+              <h3>Bill-Cut Kit</h3>
+              <ul><li>센서 + 스마트 플러그</li><li>학기 대여 또는 판매</li><li>공사 없이 설치</li></ul>
+            </article>
+            <article class="bm8-product free">
+              <div class="bm8-product-head"><span>02 · ENTRY</span><b>FREE</b></div>
+              <h3>기본 모니터링</h3>
+              <ul><li>현재 전력</li><li>누적 사용량</li><li>기본 Dashboard</li></ul>
+            </article>
+            <article class="bm8-product agent">
+              <div class="bm8-product-head"><span>03 · CORE PRODUCT</span><b>월 반복 매출</b></div>
+              <h3>Bill-Cut Agent 구독</h3>
+              <ul><li>월말 요금 예측 · 자연어 상담</li><li>목표 기반 절감 계획</li><li>이상 경고 · 승인형 제어·결과 확인</li></ul>
+            </article>
+          </div>
+
+          <div class="bm8-compact-footer reveal" style="--delay:.48s">
+            <div class="bm8-gtm-rail" aria-label="교내 시장 진입 순서">
+              <span class="label">CAMPUS GTM</span><strong>체험단</strong><i>→</i><strong>절감 사례</strong><i>→</i><strong>에브리타임·친구 추천</strong><i>→</i><strong>인근 자취촌</strong>
+            </div>
+            <div class="bm8-compact-thesis"><small>REVENUE LOGIC · PLAN</small><strong>Kit는 설치하고,<br><span>Agent는 매달 관리합니다.</span></strong></div>
+          </div>
         </div>
       </section>
 
@@ -4700,32 +6059,49 @@
             </div>
           </header>
 
-          <div class="expansion-title">
-            <p class="eyebrow reveal" style="--delay:.05s">Market & expansion</p>
-            <h2 class="headline reveal" style="--delay:.11s">하나의 컴퓨터에서 시작해,<br><span class="green">집 전체의 에너지 운영</span>으로.</h2>
+          <div class="m9-title">
+            <div>
+              <p class="eyebrow reveal" style="--delay:.05s">Expansion roadmap · Evidence gates</p>
+              <h2 class="reveal" style="--delay:.11s">장치를 늘리는 것이 아니라,<br><span>검증된 Agent를 더 큰 단위에 복제합니다.</span></h2>
+            </div>
+            <p class="m9-thesis reveal" style="--delay:.15s">확장의 기준은 장치 수가 아닙니다.<strong>같은 Telemetry와 Agent 도구를 재사용합니다.</strong></p>
           </div>
 
-          <div class="mqtt-stage reveal" style="--delay:.18s">
-            <div class="scope-current">
-              <span class="tag">CURRENT SCOPE</span>
-              <h3>Computer<br>+ Tapo</h3>
-              <p>작은 검증 단위에서 전력 상태와 요금 의사결정 경험을 먼저 만듭니다.</p>
-              <div class="current-devices"><div class="current-device">PC</div><div class="current-device">P110M</div></div>
-            </div>
+          <div class="m9-stages">
+            <article class="m9-stage current reveal" style="--delay:.19s">
+              <div class="m9-stage-head"><span class="m9-stage-no">01</span><span class="m9-stage-badge">CURRENT PROTOTYPE</span></div>
+              <h3>한 개 장치에서<br>가치를 검증</h3>
+              <p class="m9-stage-lede">컴퓨터 전력 데이터를 요금 판단과 행동 제안으로 연결합니다.</p>
+              <div class="m9-device-row"><span>Computer</span><span>Tapo P110M</span></div>
+              <ul class="m9-gates"><li>실시간 전력 수집</li><li>월말 요금 예측</li><li>행동 시나리오 비교</li></ul>
+              <div class="m9-stage-status"><span>PROTOTYPE SCOPE · VALIDATION</span><i></i></div>
+            </article>
 
-            <div class="mqtt-bus">
-              <div class="mqtt-label">MQTT · EXTENSIBLE MESSAGE BUS</div>
-              <div class="mqtt-rail"></div>
-              <i class="mqtt-packet"></i><i class="mqtt-packet p2"></i><i class="mqtt-packet p3"></i>
-            </div>
+            <article class="m9-stage next reveal" style="--delay:.24s">
+              <div class="m9-stage-head"><span class="m9-stage-no">02</span><span class="m9-stage-badge">NEXT INTEGRATION</span></div>
+              <h3>자취방 전체로<br>사용 맥락 확장</h3>
+              <p class="m9-stage-lede">생활 불편과 절감 효과를 함께 비교하는 가정용 운영 단위입니다.</p>
+              <div class="m9-device-row"><span>Air Conditioner</span><span>Lighting</span><span>TV</span></div>
+              <ul class="m9-gates"><li>장치별 Adapter</li><li>사용자 승인·안전 조건</li><li>제어 후 전력 확인</li></ul>
+              <div class="m9-stage-status"><span>INTEGRATION PLAN</span><i></i></div>
+            </article>
 
-            <div class="expansion-nodes">
-              <article class="expansion-node"><div class="icon">❄</div><div><h3>Air Conditioner</h3><p>냉방 사용과 생활 쾌적성의 균형</p></div></article>
-              <article class="expansion-node"><div class="icon">●</div><div><h3>Lighting</h3><p>재실 기반 낭비 조명 탐지</p></div></article>
-              <article class="expansion-node"><div class="icon">▰</div><div><h3>TV</h3><p>대기전력과 사용 패턴 관리</p></div></article>
-              <article class="expansion-node"><div class="icon">＋</div><div><h3>Multiple IoT</h3><p>공간·건물 단위 다중 장치 운영</p></div></article>
+            <article class="m9-stage reveal" style="--delay:.29s">
+              <div class="m9-stage-head"><span class="m9-stage-no">03</span><span class="m9-stage-badge">COMMERCIAL SCALE</span></div>
+              <h3>기숙사·학교로<br>관리 단위 확장</h3>
+              <p class="m9-stage-lede">개인 Agent 경험을 여러 방과 공간의 운영 서비스로 확장합니다.</p>
+              <div class="m9-device-row"><span>Multi-room</span><span>Campus</span><span>Managed space</span></div>
+              <ul class="m9-gates"><li>다중 사용자·권한</li><li>관리자 Dashboard</li><li>공간별 요금·ESG 리포트</li></ul>
+              <div class="m9-stage-status"><span>MARKET EXPANSION</span><i></i></div>
+            </article>
+          </div>
+
+          <div class="m9-platform reveal" style="--delay:.35s">
+            <div class="m9-platform-label"><small>REUSABLE PLATFORM LAYER</small><strong>Edge–Cloud IoT</strong></div>
+            <div class="m9-platform-flow" aria-label="MQTT, 정규화 Telemetry, Agent Tools로 이어지는 재사용 구조">
+              <span>MQTT<br>Message Bus</span><i>→</i><span>Normalized<br>Telemetry</span><i>→</i><span>Agent<br>Tools</span>
             </div>
-            <div class="expansion-axis"><span>1 DEVICE</span><i></i><span>1 HOME</span><i></i><span>MULTI SITE</span></div>
+            <div class="m9-platform-value"><strong>장치가 늘어도 Agent 로직은 재사용</strong>새 장치는 Adapter와 안전 조건을 추가해 연결하는 확장 계획입니다.</div>
           </div>
         </div>
       </section>
@@ -4742,23 +6118,69 @@
             </div>
           </header>
 
-          <div class="impact-copy">
-            <p class="eyebrow reveal" style="--delay:.05s">Sustainability / ESG</p>
-            <h2 class="display reveal" style="--delay:.11s">불편은<br>최소화하고,<br><span class="green">낭비만 제거.</span></h2>
-            <p class="lede reveal" style="--delay:.18s">무조건 끄는 절약이 아니라, 사용자의 생활 목표를 지키면서 불필요한 소비부터 줄이는 접근입니다.</p>
+          <div class="e10-title">
+            <div>
+              <p class="eyebrow reveal" style="--delay:.05s">Impact that can be verified</p>
+              <h2 class="reveal" style="--delay:.11s">절감을 주장하기 전에,<br><span>전·후 사용량으로 증명합니다.</span></h2>
+            </div>
+            <div class="e10-guardrail reveal" style="--delay:.15s">
+              <small>OPERATING PRINCIPLE</small>
+              <strong>생활 불편은 경계조건으로,<br>낭비만 우선 제거</strong>
+            </div>
           </div>
 
-          <div class="comfort-stage reveal" style="--delay:.2s" aria-label="생활 쾌적성을 유지하면서 낭비 에너지 입자만 제거하는 그래픽">
-            <div class="comfort-ring"></div>
-            <div class="comfort-core"><div><strong>생활 쾌적성<br>유지</strong><span>COMFORT GUARDRAIL</span></div></div>
-            <i class="waste-particle w1"></i><i class="waste-particle w2"></i><i class="waste-particle w3"></i><i class="waste-particle w4"></i>
-            <div class="impact-label i1"><strong>전력 절감</strong><span>낭비 사용 우선 탐색</span></div>
-            <div class="impact-label i2"><strong>탄소 감소</strong><span>절감 전력 기반 효과 산정 계획</span></div>
-            <div class="impact-label i3"><strong>에너지 교육</strong><span>행동과 비용의 연결 학습</span></div>
-            <div class="impact-label i4"><strong>ESG 리포트</strong><span>기관용 확장 기능 계획</span></div>
+          <div class="e10-loop" aria-label="기준선 측정부터 효과 검증까지의 네 단계">
+            <article class="e10-step reveal" style="--delay:.17s">
+              <span class="e10-step-no">01</span>
+              <h3>기준선 측정</h3>
+              <p>장치별 kWh와 사용 패턴 기록</p>
+            </article>
+            <span class="e10-arrow a1" aria-hidden="true">→</span>
+            <article class="e10-step reveal" style="--delay:.21s">
+              <span class="e10-step-no">02</span>
+              <h3>낭비 판단</h3>
+              <p>대기전력·비재실·이상 사용 구분</p>
+            </article>
+            <span class="e10-arrow a2" aria-hidden="true">→</span>
+            <article class="e10-step reveal" style="--delay:.25s">
+              <span class="e10-step-no">03</span>
+              <h3>승인형 행동</h3>
+              <p>불편이 낮은 절감안부터 사용자 승인</p>
+            </article>
+            <span class="e10-arrow a3" aria-hidden="true">→</span>
+            <article class="e10-step reveal" style="--delay:.29s">
+              <span class="e10-step-no">04</span>
+              <h3>효과 검증</h3>
+              <p>제어 전후 전력과 목표 기여도 비교</p>
+            </article>
           </div>
 
-          <p class="impact-caption reveal" style="--delay:.28s">효과 항목은 제품 방향과 기대 임팩트입니다. 실제 절감량·탄소 감축량·사용자 행동 변화는 Pilot 데이터로 검증해야 합니다.</p>
+          <div class="e10-bottom">
+            <section class="e10-outputs reveal" style="--delay:.31s" aria-label="파일럿에서 측정할 네 가지 결과">
+              <div class="e10-panel-head"><strong>측정 가능한 결과</strong><span>PILOT OUTPUTS</span></div>
+              <div class="e10-output-grid">
+                <article class="e10-output"><b>kWh</b><strong>절감 전력량</strong><small>기준선 대비 변화</small></article>
+                <article class="e10-output"><b>₩</b><strong>절감 비용</strong><small>누진요금 효과 포함</small></article>
+                <article class="e10-output"><b>kgCO₂e</b><strong>탄소 환산</strong><small>검증된 배출계수 적용</small></article>
+                <article class="e10-output"><b>ACTION</b><strong>행동 변화</strong><small>제안 수용·유지율</small></article>
+              </div>
+            </section>
+
+            <aside class="e10-evidence reveal" style="--delay:.34s">
+              <div class="e10-panel-head"><strong>효과 검증 순서</strong><span>EVIDENCE PLAN</span></div>
+              <div class="e10-evidence-flow">
+                <div class="e10-evidence-step"><i>01</i><strong>Before</strong> 동일 조건의 기준선 확보</div>
+                <div class="e10-evidence-step"><i>02</i><strong>Intervention</strong> Agent 제안·승인 기록</div>
+                <div class="e10-evidence-step"><i>03</i><strong>After</strong> 전후 사용량과 비용 비교</div>
+              </div>
+            </aside>
+          </div>
+
+          <div class="e10-value reveal" style="--delay:.37s">
+            <span class="label">ESG VALUE</span>
+            <strong>학생에게는 요금 학습을, 기관에는 검증 가능한 ESG 근거를 제공합니다.</strong>
+            <small>EXPECTED IMPACT · PILOT VALIDATION</small>
+          </div>
         </div>
       </section>
 
