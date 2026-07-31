@@ -20,6 +20,7 @@
       --green-2: #73f2ae;
       --mint: #b9ffd5;
       --lime: #d7ff75;
+      --blue: #5aa7ff;
       --amber: #ffbd59;
       --danger: #ff6b72;
       --text: #f0f8f3;
@@ -753,6 +754,34 @@
     .formula-list div { padding: 15px 17px; border-left: 3px solid var(--green); background: rgba(37,220,132,.06); }
     .formula-list strong { display: block; font-size: 17px; }
     .formula-list span { color: var(--muted); font-size: 13px; }
+    .goal-gate {
+      position: relative;
+      min-height: 330px;
+      display: grid;
+      align-content: center;
+      gap: 13px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--panel);
+    }
+    .forecast-chip {
+      padding: 14px 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 15px;
+      text-align: center;
+      background: rgba(255,255,255,.055);
+    }
+    .forecast-chip small { color: var(--muted); font-size: 11px; font-weight: 850; letter-spacing: .06em; }
+    .forecast-chip strong { display: block; margin-top: 5px; font-size: clamp(31px,3.2vw,44px); letter-spacing: -.045em; }
+    .goal-scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+    .goal-case { padding: 15px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.035); }
+    .goal-case b { display: block; font-size: 13px; }
+    .goal-case strong { display: block; margin-top: 7px; font-size: 22px; }
+    .goal-case span { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; line-height: 1.35; }
+    .goal-case.no-action { border-color: rgba(255,255,255,.16); }
+    .goal-case.plan { border-color: rgba(115,242,174,.36); background: rgba(37,220,132,.075); }
+    .goal-case.plan strong { color: var(--green-2); }
 
     /* Agent */
     .agent-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 22px; }
@@ -775,6 +804,21 @@
     .power-state strong { display: block; color: var(--green-2); font-size: 36px; }
     .power-state span { color: var(--muted); font-size: 12px; }
     .power-arrow { color: var(--green); font-size: 24px; font-weight: 900; }
+    .result-split { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+    .result-panel {
+      min-height: 102px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: var(--panel);
+    }
+    .result-panel small { font-size: 10px; font-weight: 900; letter-spacing: .07em; }
+    .result-panel strong { display: block; margin-top: 7px; font-size: 21px; }
+    .result-panel span { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; line-height: 1.36; }
+    .result-panel.estimated { border-color: rgba(90,167,255,.38); background: rgba(90,167,255,.075); }
+    .result-panel.estimated small, .result-panel.estimated strong { color: #94c7ff; }
+    .result-panel.verified { border-color: rgba(115,242,174,.4); background: rgba(37,220,132,.08); }
+    .result-panel.verified small, .result-panel.verified strong { color: var(--green-2); }
 
     /* Safety */
     .shield-wrap { display: grid; grid-template-columns: 290px 1fr; gap: 28px; align-items: center; }
@@ -1021,6 +1065,12 @@
     }
     #agentProofSlide .proof-step.guard { border-color: rgba(255,189,89,.3); }
     #agentProofSlide .proof-step.guard::before { background: var(--amber); }
+    #agentProofSlide .proof-step.estimated {
+      border-color: rgba(90,167,255,.42);
+      background: linear-gradient(145deg, rgba(38,84,139,.52), rgba(8,24,41,.97));
+    }
+    #agentProofSlide .proof-step.estimated::before { background: var(--blue); }
+    #agentProofSlide .proof-step.estimated time { color: #9acaff; }
     #agentProofSlide .proof-step.verify {
       border-color: rgba(115,242,174,.4);
       background: linear-gradient(145deg, rgba(25,77,49,.72), rgba(8,27,17,.97));
@@ -1062,6 +1112,8 @@
       font-weight: 800;
       background: linear-gradient(180deg, rgba(37,220,132,.06), transparent);
     }
+    #agentProofSlide .proof-evidence span.estimated { border-color: rgba(90,167,255,.5); color: #b8d9ff; background: linear-gradient(180deg,rgba(90,167,255,.1),transparent); }
+    #agentProofSlide .proof-evidence span.verified { border-color: rgba(115,242,174,.52); color: var(--green-2); }
 
     /* Business / expansion */
     .business-flow { display: grid; grid-template-columns: repeat(5,1fr); gap: 9px; }
@@ -1121,6 +1173,7 @@
       .hardware-card { min-height: 168px; }
       .hardware-card h3 { margin-top: 13px; }
       .tariff-stairs { height: 275px; }
+      .goal-gate { min-height: 265px; padding: 16px; }
       .frame-shell { height: 68vh; }
       #agentProofSlide .proof-step { min-height: 104px; padding: 11px 13px; }
       #agentProofSlide .proof-step strong { margin-top: 5px; }
@@ -1131,6 +1184,7 @@
       #agentLlmSlide .agent-part { min-height: 145px; padding: 12px 14px; }
       #agentLlmSlide .api-hop { min-height: 66px; padding: 8px 10px; }
       #agentLlmSlide .agent-contract span { padding: 7px 8px; }
+      .result-panel { min-height: 86px; padding: 12px 14px; }
       .roadmap article { min-height: 210px; }
       .caption-bar { bottom: 17px; }
     }
@@ -1147,13 +1201,13 @@
       <div class="content wide">
         <div class="hero-grid">
           <div>
-            <div class="eyebrow" data-anim style="--d:.04s">FINAL BRANCH codex/complete-steps11-15 · BUILD cd71920 · 2026.07.31</div>
+            <div class="eyebrow" data-anim style="--d:.04s">GOAL-DRIVEN ENERGY AGENT · VERIFIED CLOSED LOOP</div>
             <h1 class="hero-title" data-anim style="--d:.1s">
               우리 집 전기요금을<br><span>에이전트로:</span><em>Bill-Cut Agent</em>
             </h1>
             <p class="hero-quote" data-anim style="--d:.18s">
-              단순히 전원을 끄는 스위치가 아니라, <strong>끄지 말아야 할 때를 알고</strong>
-              실제 절감 효과까지 증명하는 누진 방어 Agent입니다.
+              실시간 전력·환경·요금을 관찰하고 <strong>목표요금에 맞는 절감 전략</strong>을 세운 뒤,
+              사용자 승인 후 실제 전력 감소와 안전한 복구까지 검증합니다.
             </p>
           </div>
           <div class="bill-orbit" data-anim style="--d:.16s">
@@ -1174,7 +1228,7 @@
           </div>
         </div>
       </div>
-      <div class="caption-bar">Bill-Cut Agent · 누진요금 예측과 승인형 폐루프 제어</div>
+      <div class="caption-bar">실시간 관찰 → 목표 기반 전략 → 사용자 승인 → 실제 전력 감소·복구 검증</div>
     </section>
 
     <!-- 02 -->
@@ -1224,16 +1278,16 @@
           <div class="compare-cell label">행동 방식</div>
           <div class="compare-cell plug">원격 ON/OFF</div>
           <div class="compare-cell home">루틴에 따른 자동 제어</div>
-          <div class="compare-cell billcut"><strong>계획 제안 → 사용자 승인 → 안전정책 확인</strong></div>
+          <div class="compare-cell billcut"><strong>보호 대상 제외 → Mock 전략 + P110M 검증 계획</strong></div>
 
           <div class="compare-cell label">완료 기준</div>
           <div class="compare-cell plug">명령 전송 또는 상태 표시</div>
           <div class="compare-cell home">루틴 실행·기기 상태 변경</div>
-          <div class="compare-cell billcut"><strong>상태와 전력 감소 실측 → 부족하면 재계획</strong></div>
+          <div class="compare-cell billcut"><strong>예상과 실측을 구분하고 승인·복구 증거 저장</strong></div>
         </div>
         <div class="agent-reason" data-anim style="--d:.23s">
-          <strong>왜 Agent인가?</strong> 목표가 계속 변하고, 여러 도구와 행동을 조합하며,
-          실행 결과에 따라 다음 계획을 다시 세워야 하기 때문입니다.
+          <strong>왜 Agent인가?</strong> 목표 차이를 계산하고, 보호 대상을 제외하며,
+          예상 전략과 실제 검증 결과를 하나의 감사 가능한 흐름으로 관리하기 때문입니다.
         </div>
       </div>
     </section>
@@ -1257,7 +1311,7 @@
           <span class="pill">Approval-gated</span><span class="pill">Closed-loop</span>
           <span class="pill">Explainable</span><span class="pill">Local-first</span><span class="pill">Fail-safe</span>
         </div>
-        <p class="cap" data-anim style="--d:.27s">현재 검증 범위: D0 LED와 안전한 P110M 대체 부하를 대상으로 한 MVP 폐루프.</p>
+        <p class="cap" data-anim style="--d:.27s"><strong>결과 구분:</strong> 에어컨·조명 월간 전략은 ESTIMATED · NOT EXECUTED, 안전한 노트북 충전기 P110M 실측만 VERIFIED &amp; RESTORED.</p>
       </div>
     </section>
 
@@ -1347,25 +1401,37 @@
     </section>
 
     <!-- 08 -->
-    <section class="slide" data-index="7" aria-label="8. Tariff intelligence">
+    <section class="slide" data-index="7" aria-label="8. Goal-aware tariff decision">
       <div class="content wide">
-        <div class="eyebrow" data-anim>7. Python Tariff Engine</div>
-        <h2 class="h1" data-anim style="--d:.06s">W가 아니라, 이번 달 누진요금의<br><span class="green">다음 1 kWh를 계산합니다.</span></h2>
+        <div class="eyebrow" data-anim>7. Goal-aware Tariff Decision</div>
+        <h2 class="h1" data-anim style="--d:.06s">목표가 이미 달성됐다면,<br><span class="green">Agent는 아무것도 끄지 않습니다.</span></h2>
         <div class="tariff-layout">
-          <div class="tariff-stairs" data-anim style="--d:.13s">
-            <div class="tier" style="--h:38%"><strong>1구간</strong><span>기본 사용</span></div>
-            <div class="tier" style="--h:66%"><strong>2구간</strong><span>한계비용 상승</span></div>
-            <div class="tier" style="--h:94%"><strong>3구간</strong><span>누진 방어 필요</span></div>
-            <i class="tier-marker" aria-hidden="true"></i>
+          <div class="goal-gate" data-anim style="--d:.13s">
+            <div class="forecast-chip">
+              <small>DEMO FORECAST</small>
+              <strong>48,952원</strong>
+            </div>
+            <div class="goal-scenarios">
+              <div class="goal-case no-action">
+                <b>목표 50,000원</b>
+                <strong>이미 달성</strong>
+                <span>계획·승인·물리 제어를 만들지 않음</span>
+              </div>
+              <div class="goal-case plan">
+                <b>목표 48,000원</b>
+                <strong>차이 계산 → 계획</strong>
+                <span>Mock 전략 + P110M 검증 계획 생성</span>
+              </div>
+            </div>
           </div>
           <div class="formula-list" data-anim style="--d:.18s">
-            <div><strong>월말 사용량·요금 예측</strong><span>현재 사용 속도와 검침일까지 남은 기간</span></div>
-            <div><strong>추가 1 kWh 한계비용</strong><span>누진구간 변화까지 반영</span></div>
-            <div><strong>기기별 절감 시뮬레이션</strong><span>사용시간 감소 → kWh → 금액</span></div>
-            <div><strong>목표 요금 감축량</strong><span>목표 달성에 필요한 남은 절감량</span></div>
+            <div><strong>목표 차이 계산</strong><span>예상요금과 목표요금을 먼저 비교</span></div>
+            <div><strong>보호 대상 선제 제외</strong><span>냉장고·공유기·재실 중 조명</span></div>
+            <div><strong>Mock 월간 전략</strong><span>가전별 사용시간 조정과 예상 절감 kWh</span></div>
+            <div><strong>실물 검증 계획</strong><span>안전한 P110M 부하로 10초 timed trial</span></div>
           </div>
         </div>
-        <p class="cap" data-anim style="--d:.24s"><strong>정직한 한계:</strong> 현재 기본 요금표는 데모 fixture이며, 상용화 전 공식 요금표와 버전 연동이 필요합니다.</p>
+        <p class="cap" data-anim style="--d:.24s"><strong>시연 기준:</strong> 예상요금 48,952원보다 낮은 48,000원을 입력해야 두 계획이 생성됩니다.</p>
       </div>
     </section>
 
@@ -1390,7 +1456,7 @@
             <article class="agent-part" style="--r:1">
               <small>GOAL / LOOP / STATE</small>
               <h3>Agent Orchestrator</h3>
-              <p>목표 금액·계획 ID·승인 상태·행동 로그를 유지하고, 최대 8회의 tool loop와 재계획 시점을 관리합니다.</p>
+              <p>목표 금액·계획 ID·승인 상태·행동 로그를 유지하고, 실행 결과에 따라 완료·보류·재계획을 결정합니다.</p>
             </article>
             <article class="agent-part" style="--r:2">
               <small>DETERMINISTIC LOCAL BACKEND</small>
@@ -1404,39 +1470,46 @@
           <div class="api-hop"><b>HTTPS</b><strong>POST /v1/responses</strong><span>모델을 다운로드하지 않고 cloud API 호출</span></div>
           <div class="api-hop"><b>STRUCTURED</b><strong>function_call JSON</strong><span>도구명·인자를 JSON Schema로 검증</span></div>
           <div class="api-hop"><b>LOCAL EXECUTION</b><strong>Python tool 실행</strong><span>DB·요금·안전·장치 결과 반환</span></div>
-          <div class="api-hop"><b>CONTINUE</b><strong>결과 설명 / 다음 tool</strong><span>목표 달성 또는 최대 round에서 종료</span></div>
+          <div class="api-hop"><b>CONTINUE</b><strong>결과 설명 / 다음 tool</strong><span>목표 달성·무행동·재계획 중 다음 상태 결정</span></div>
         </div>
         <div class="agent-contract" data-anim style="--d:.29s">
-          <span>API key · 환경변수만 사용</span>
-          <span>Timeout 30초 · 재시도 2회</span>
+          <span>LLM · 질문 이해와 도구 선택</span>
+          <span>Agent · 목표·계획·승인 상태 관리</span>
+          <span>Python · 요금·안전·검증 계산</span>
           <span>LLM 물리 제어 권한 0</span>
-          <span>실패·키 부재 → offline_fallback</span>
         </div>
       </div>
     </section>
 
     <!-- 10 -->
-    <section class="slide" data-index="9" aria-label="10. Closed-loop control">
+    <section class="slide" data-index="9" aria-label="10. Estimated strategy and verified result">
       <div class="content wide">
-        <div class="eyebrow" data-anim>9. Approval-gated Closed Loop</div>
-        <h2 class="h1" data-anim style="--d:.06s">명령을 보낸 뒤,<br><span class="green">실제 전력 감소까지 확인해야 완료입니다.</span></h2>
+        <div class="eyebrow" data-anim>9. Honest Result Contract</div>
+        <h2 class="h1" data-anim style="--d:.06s">예상 계획과 실제 검증을,<br><span class="green">같은 성공처럼 말하지 않습니다.</span></h2>
         <div class="loop-track" style="grid-template-columns:repeat(6,1fr);--d:.13s" data-anim>
-          <div class="flow-node" style="--n:0"><b>PLAN</b><strong>절감 계획</strong><span>안정적 action ID</span></div>
-          <div class="flow-node" style="--n:1"><b>APPROVE</b><strong>사용자 승인</strong><span>승인자·시각 기록</span></div>
-          <div class="flow-node" style="--n:2"><b>POLICY</b><strong>안전 재검사</strong><span>실행 직전 차단</span></div>
-          <div class="flow-node" style="--n:3"><b>ACT</b><strong>장치 실행</strong><span>idempotency 적용</span></div>
-          <div class="flow-node" style="--n:4"><b>VERIFY</b><strong>상태·W 실측</strong><span>세 조건 검증</span></div>
-          <div class="flow-node" style="--n:5"><b>REPLAN</b><strong>재계획</strong><span>실패 행동 제외</span></div>
+          <div class="flow-node" style="--n:0"><b>GOAL</b><strong>목표 48,000원</strong><span>forecast gap 계산</span></div>
+          <div class="flow-node" style="--n:1"><b>PROTECT</b><strong>보호 대상 제외</strong><span>필수·재실 기기</span></div>
+          <div class="flow-node" style="--n:2"><b>PLAN</b><strong>두 계획 생성</strong><span>Mock + P110M</span></div>
+          <div class="flow-node" style="--n:3"><b>APPROVE</b><strong>사용자 승인</strong><span>승인 전 명령 0</span></div>
+          <div class="flow-node" style="--n:4"><b>ACT</b><strong>10초 OFF</strong><span>안전한 충전기 부하</span></div>
+          <div class="flow-node" style="--n:5"><b>VERIFY</b><strong>감소·복구 확인</strong><span>증거 영속화</span></div>
         </div>
-        <div class="verified-banner" data-anim style="--d:.2s">
-          <div><strong>① 명령 성공</strong><span>드라이버가 성공 결과를 반환</span></div>
-          <div><strong>② 실제 상태 변경</strong><span>장치 state가 목표 상태로 전환</span></div>
-          <div><strong>③ 측정 전력 감소</strong><span>실측 W가 기준선보다 감소</span></div>
+        <div class="result-split" data-anim style="--d:.2s">
+          <div class="result-panel estimated">
+            <small>BLUE · MOCK STRATEGY</small>
+            <strong>ESTIMATED · NOT EXECUTED</strong>
+            <span>에어컨·조명 월간 사용시간 조정과 예상 절감 kWh. 실제 장치 제어라고 표현하지 않습니다.</span>
+          </div>
+          <div class="result-panel verified">
+            <small>GREEN · P110M RECEIPT</small>
+            <strong>VERIFIED &amp; RESTORED</strong>
+            <span>승인 시간·실제 W 변화·OFF 10초·ON 복구를 실측 증거로 저장합니다.</span>
+          </div>
         </div>
         <div class="power-drop" data-anim style="--d:.25s">
-          <div class="power-state"><strong>약 20 W</strong><span>안전한 P110M 데모 부하</span></div><div class="power-arrow">→</div>
-          <div class="power-state"><strong>0 W</strong><span>near_zero_power_confirmed=true</span></div><div class="power-arrow">→</div>
-          <div class="power-state"><strong>ON 복구</strong><span>Timed trial 종료 뒤 자동 복원</span></div>
+          <div class="power-state"><strong>현재 W</strong><span>노트북 충전기 ON</span></div><div class="power-arrow">→</div>
+          <div class="power-state"><strong>0 W</strong><span>10초 OFF · 실제 감소</span></div><div class="power-arrow">→</div>
+          <div class="power-state"><strong>ON 복구</strong><span>상태·전력·복구 모두 확인</span></div>
         </div>
       </div>
     </section>
@@ -1458,7 +1531,7 @@
           <div class="frame-top">
             <div class="frame-address">
               <i></i><i></i><i></i>
-              <span id="frameAddress">https://strategic-july-generates-recognised.trycloudflare.com/dashboard/?mode=api</span>
+              <span id="frameAddress">https://reliability-neighbors-heroes-turbo.trycloudflare.com/dashboard/?mode=api</span>
             </div>
             <div class="relay-toolbar">
               <div class="relay-copy">
@@ -1476,7 +1549,7 @@
             id="dashboardFrame"
             class="demo-frame"
             title="Bill-Cut Agent live dashboard"
-            data-src="https://strategic-july-generates-recognised.trycloudflare.com/dashboard/?mode=api"
+            data-src="https://reliability-neighbors-heroes-turbo.trycloudflare.com/dashboard/?mode=api"
             data-relay-src="https://brightwindow.github.io/makerton-live-relay/"
             allow="autoplay; fullscreen; picture-in-picture"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -1496,23 +1569,23 @@
         <div class="eyebrow" data-anim>11. 3-MINUTE LIVE AGENT PROOF</div>
         <h2 class="h1" data-anim style="--d:.06s">AI가 답하는 데모가 아니라,<br><span class="green">목표를 끝까지 수행하는 Agent를 증명합니다.</span></h2>
         <div class="proof-sequence" data-anim style="--d:.13s">
-          <div class="proof-step" style="--p:0"><time>0:00 · OBSERVE</time><strong>실제 상태 관찰</strong><span>W · PIR · 조도 · 예상요금 동시 확인</span></div>
-          <div class="proof-step" style="--p:1"><time>0:20 · DIAGNOSE</time><strong>증가 원인 분석</strong><span>DB · 이상 탐지 · 요금 도구로 근거 확인</span></div>
-          <div class="proof-step" style="--p:2"><time>0:45 · SET GOAL</time><strong>48,000원 목표</strong><span>시연 계산값: 3.85 kWh 감축 필요</span></div>
-          <div class="proof-step guard" style="--p:3"><time>1:10 · PLAN &amp; GUARD</time><strong>최소 불편 행동</strong><span>절감량 비교 · 보호기기 자동 제외</span></div>
-          <div class="proof-step guard" style="--p:4"><time>1:30 · APPROVE</time><strong>승인 경계 확인</strong><span>계획 ID 영속화 · 승인 전 물리 명령 0회</span></div>
-          <div class="proof-step" style="--p:5"><time>1:50 · ACT</time><strong>승인된 행동 실행</strong><span>P110M 10초 timed trial</span></div>
-          <div class="proof-step verify" style="--p:6"><time>2:10 · VERIFY</time><strong>실측 3조건 검증</strong><span>14~20W → 0W → ON 복구</span></div>
-          <div class="proof-step replan" style="--p:7"><time>2:35 · RECEIPT / REPLAN</time><strong>결과로 다음 행동 결정</strong><span>절감 영수증 · 예상요금 갱신 · 실패 시 재계획</span></div>
+          <div class="proof-step" style="--p:0"><time>0:00 · LIVE POWER</time><strong>P110M 현재 W 확인</strong><span>실제 연결 상태와 소비전력</span></div>
+          <div class="proof-step" style="--p:1"><time>0:20 · SET TARGET</time><strong>48,000원 입력</strong><span>예상 48,952원보다 낮은 목표</span></div>
+          <div class="proof-step" style="--p:2"><time>0:40 · AUTO PLAN</time><strong>두 계획 자동 생성</strong><span>Mock 월간 전략 + P110M 10초 검증</span></div>
+          <div class="proof-step estimated" style="--p:3"><time>1:00 · MOCK PLAN</time><strong>파란 예상 계획서</strong><span>가전별 조정 · 예상 절감 · 보호 대상</span></div>
+          <div class="proof-step estimated" style="--p:4"><time>1:25 · EXPLAIN</time><strong>ESTIMATED · NOT EXECUTED</strong><span>실제 장치 제어 완료로 표현하지 않음</span></div>
+          <div class="proof-step guard" style="--p:5"><time>1:50 · APPROVE</time><strong>P110M 계획 승인</strong><span>승인 전 물리 명령 0회</span></div>
+          <div class="proof-step verify" style="--p:6"><time>2:05 · ACT / VERIFY</time><strong>10초 OFF 실측</strong><span>전력 감소 후 자동 ON 복구 · 약 15~20초</span></div>
+          <div class="proof-step replan" style="--p:7"><time>2:35 · RECEIPT</time><strong>초록 실측 영수증</strong><span>승인 시각 · 실제 W · 검증 · 복구 결과</span></div>
         </div>
         <div class="agent-proof-line" data-anim style="--d:.22s">
-          <p>자동화는 정해진 규칙을 실행합니다. <strong>Agent는 목표·제약·실패를 해석해 다음 행동을 바꿉니다.</strong></p>
+          <p>사용자는 목표만 정합니다. <strong>Agent가 보호 대상을 제외하고 예상 전략과 실제 검증 대상을 스스로 나눕니다.</strong></p>
         </div>
         <div class="proof-evidence" data-anim style="--d:.28s">
-          <span>LLM 직접 제어 권한 0</span>
-          <span>승인 전 물리 명령 0</span>
-          <span>성공 판정 3조건</span>
-          <span>실패 행동 제외 후 재계획</span>
+          <span>목표 입력만 사용자</span>
+          <span>보호 기기 자동 제외</span>
+          <span class="estimated">BLUE · ESTIMATED</span>
+          <span class="verified">GREEN · VERIFIED &amp; RESTORED</span>
         </div>
       </div>
     </section>
@@ -1543,12 +1616,12 @@
         <div class="eyebrow" data-anim>13. Expansion Roadmap · Honest Scope</div>
         <h2 class="h1" data-anim style="--d:.06s">검증된 안전 부하에서 시작해,<br><span class="green">장치와 공간을 단계적으로 넓힙니다.</span></h2>
         <div class="roadmap" data-anim style="--d:.13s">
-          <article class="current"><small>CURRENT · VERIFIED MVP</small><h3>개인 공간</h3><p>P110M 안전 부하 + D0 LED<br>전력·환경·재실 관찰<br>계획·승인·실행·실측 검증</p></article>
-          <article><small>NEXT · DEVICE ADAPTERS</small><h3>자취방 전체</h3><p>Air Conditioner · Lighting · TV<br>장치별 안전정책과 최소 운전주기<br>다중 행동 절감 시나리오</p></article>
+          <article class="current"><small>CURRENT · VERIFIED MVP</small><h3>개인 공간</h3><p>P110M 노트북 충전기 안전 부하 + D0 LED<br>계획·승인·OFF 실측·ON 복구<br>감사 로그와 실측 영수증</p></article>
+          <article><small>NEXT · DEVICE ADAPTERS</small><h3>자취방 전체</h3><p>Air Conditioner · Lighting · TV<br>현재는 Mock profile로 월간 전략 검증<br>실장치별 안전정책과 adapter 확장</p></article>
           <article><small>EXPANSION · MANAGED SPACE</small><h3>기숙사·학교</h3><p>다중 사용자와 권한<br>관리자 Dashboard SaaS<br>공간별 요금·ESG 리포트</p></article>
         </div>
         <div class="limit-line" data-anim style="--d:.22s">
-          현재 한계 · 데모 요금표 fixture · 카메라/WS2812B 제외 · 키 부재 시 offline fallback · 모든 가전을 자동 제어하는 완제품이 아닌 안전 부하 중심 MVP
+          현재 범위 · 에어컨·조명 월간 전략은 Mock 기반 예상값 · 실제 물리 검증은 P110M 안전 부하 · 공식 요금표 연동은 상용화 전 과제
         </div>
       </div>
     </section>
@@ -1560,13 +1633,13 @@
         <div class="closing-grid">
           <div data-anim style="--d:.06s">
             <blockquote class="closing-quote">
-              저희가 만든 것은 단순히 전원을 끄는 스위치가 아니라,
-              <span>끄지 말아야 할 때를 알고 실제 절감 효과까지 증명하는 누진 방어 Agent</span>입니다.
+              사용자는 목표만 정합니다.
+              <span>Bill-Cut Agent가 보호 대상을 제외하고, 전략을 세우고, 실제 결과까지 증명합니다.</span>
             </blockquote>
             <div class="proof-strip" style="margin-top:25px">
-              <div><strong>OBSERVE</strong><span>실시간 전력·환경</span></div>
-              <div><strong>DECIDE</strong><span>누진요금·안전정책</span></div>
-              <div><strong>PROVE</strong><span>상태·전력 실측</span></div>
+              <div><strong>ESTIMATE</strong><span>Mock 월간 전략</span></div>
+              <div><strong>APPROVE</strong><span>사용자 통제</span></div>
+              <div><strong>VERIFY</strong><span>P110M 실측·복구</span></div>
             </div>
           </div>
           <div class="reward-stack" data-anim style="--d:.14s">
@@ -1577,7 +1650,7 @@
           </div>
         </div>
       </div>
-      <div class="caption-bar">관찰 → 예측 → 계획 → 승인 → 실행 → 실측 검증 → 재계획</div>
+      <div class="caption-bar">목표 차이 계산 → 보호 대상 제외 → 예상 전략 → 승인 → P110M 실측 → 안전 복구</div>
     </section>
   </main>
 
